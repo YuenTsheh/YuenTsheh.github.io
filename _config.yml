@@ -16,9 +16,9 @@ future: true
 
 # SNS settings
 RSS: true
-weibo_username:     darian
+#weibo_username:     
 github_username:    Darian1996
-twitter_username:   darian
+#twitter_username:   
 #facebook_username:  darian
 #linkedin_username:  darian
 
