@@ -3,7 +3,7 @@ title: darian
 SEOTitle: 技术博客
 header-img: img/home-bg.jpg
 email: 
-description: ""
+description: "Darian Blog"
 keyword: "darian"
 url: ""              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -80,7 +80,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "记录一下自己的成长之路"
+sidebar-about-description: "Welcome"
 sidebar-avatar: /img/darian.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
