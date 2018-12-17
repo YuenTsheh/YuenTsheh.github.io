@@ -5,7 +5,8 @@
 - 本科
 - 北京
 - 个人邮箱：1934849492@qq.com
-- [https://github.com/Darian1996](https://github.com/Darian1996)
+- GitHub：[https://github.com/Darian1996](https://github.com/Darian1996)
+- 个人博客：[https://darian1996.github.io/](https://darian1996.github.io/)
 
 
 
