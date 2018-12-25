@@ -133,17 +133,18 @@ Spring 5 之后，文档发生了变化，
 > ```
 
  >```dtd
- >>>><xsd:element name="component-scan">
- >>>>		<xsd:annotation>
- >>>>			<xsd:documentation>
- >>>>			</xsd:documentation>
- >>>>		</xsd:annotation>
- >>>>		<xsd:complexType>
- >>>>			<xsd:sequence>
- >>>>				<xsd:element name="include-filter" type="filterType"
- >>>>					minOccurs="0" maxOccurs="unbounded">
- >>>>					<xsd:annotation>
- >>>>						<xsd:documentation>
+ >>>>><xsd:element name="component-scan">
+ >>>>>		<xsd:annotation>
+ >>>>>			<xsd:documentation>
+ >>>>>			</xsd:documentation>
+ >>>>>		</xsd:annotation>
+ >>>>>		<xsd:complexType>
+ >>>>>			<xsd:sequence>
+ >>>>>				<xsd:element name="include-filter" type="filterType"
+ >>>>>					minOccurs="0" maxOccurs="unbounded">
+ >>>>>					<xsd:annotation>
+ >>>>>						<xsd:documentation>
+ >>>>>```
  >>>>```
  >>>```
  >>```
@@ -159,9 +160,9 @@ Spring 5 之后，文档发生了变化，
 
 嵌套式的 element 
 
-![1544304522048](assets/1544304522048.png)
+![1544304522048](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544304522048.png)
 
-![1544304564425](assets/1544304564425.png)
+![1544304564425](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544304564425.png)
 
 在 XSD 中的 
 

@@ -253,7 +253,7 @@ public URLConnection openConnection() throws java.io.IOException {
 }
 ```
 
-![1543624209047](assets/1543624209047.png)
+![1543624209047](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543624209047.png)
 
 
 
@@ -374,7 +374,7 @@ private static class DefaultFactory implements URLStreamHandlerFactory {
     }
 ```
 
-![1543635545046](assets/1543635545046.png)
+![1543635545046](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543635545046.png)
 
 
 
@@ -388,7 +388,7 @@ Spring Boot 怎么知道 `BOOT-INF\lib\` 下边有那些 **`jar`** 的呢？
 
 ##### `java.net.URLStreamHandlerFactory` 
 
-![1543635894387](assets/1543635894387.png)
+![1543635894387](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543635894387.png)
 
 
 

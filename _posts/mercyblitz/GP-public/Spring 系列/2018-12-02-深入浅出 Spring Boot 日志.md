@@ -635,7 +635,7 @@ public class LoggerController extends BaseController{
 >  }
 >  ```
 >
->  | ![[Tip]](assets/tip-1543769127901.png)                       |
+>  | ![[Tip]](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/tip-1543769127901.png) |
 >  | ------------------------------------------------------------ |
 >  | To “reset” the specific level of the logger (and use the default configuration instead), you can pass a value of `null` as the `configuredLevel`. |
 >

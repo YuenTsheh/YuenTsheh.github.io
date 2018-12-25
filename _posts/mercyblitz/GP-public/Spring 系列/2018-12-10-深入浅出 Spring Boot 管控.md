@@ -62,7 +62,7 @@ http 、TCP、reactive 为什么中国人没有，外国人有？
 
 ##### 架构
 
-![1544412247085](assets/1544412247085.png)
+![1544412247085](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544412247085.png)
 
 
 
@@ -94,7 +94,7 @@ http 、TCP、reactive 为什么中国人没有，外国人有？
 
 [jcp.org](https://jcp.org/en/home/index) : JAVA 的规范
 
-![1544416007325](assets/1544416007325.png)
+![1544416007325](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544416007325.png)
 
 
 
@@ -213,7 +213,7 @@ P ： PID 进程号，
 
 
 
-![1544431104935](assets/1544431104935.png)
+![1544431104935](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544431104935.png)
 
 
 
@@ -482,7 +482,7 @@ public class Person {
 }
 ```
 
-![1544502422519](assets/1544502422519.png)
+![1544502422519](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544502422519.png)
 
 
 

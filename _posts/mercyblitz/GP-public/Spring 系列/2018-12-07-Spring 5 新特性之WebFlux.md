@@ -334,11 +334,11 @@ JAX-RS 规范中：
 
 加了 Optional
 
-![1544191338362](assets/1544191338362.png)
+![1544191338362](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544191338362.png)
 
 没有加 Optional
 
-![1544191424167](assets/1544191424167.png)
+![1544191424167](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544191424167.png)
 
 
 
@@ -346,7 +346,7 @@ Mono 就是单一的意思，就是欺负中国人不懂英文，如果某一天
 
 `Mono.just("")` 
 
-![1544191640393](assets/1544191640393.png)
+![1544191640393](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1544191640393.png)
 
 这就是 WebFlux 的使用方式，
 

@@ -416,7 +416,7 @@ http://localhost:8080/foo
 
 ## 如何调试。
 
-![1543293731074](assets/1543293731074.png)
+![1543293731074](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543293731074.png)
 
 `java -jar  `
 
@@ -435,13 +435,13 @@ Listening for transport dt_socket at address: 9527
 
 
 
-![1543294143294](assets/1543294211509.png)
+![1543294143294](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543294211509.png)
 
-![1543294234081](assets/1543294234081.png)
+![1543294234081](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543294234081.png)
 
 
 
-![1543294274680](assets/1543294274680.png)
+![1543294274680](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543294274680.png)
 
 
 

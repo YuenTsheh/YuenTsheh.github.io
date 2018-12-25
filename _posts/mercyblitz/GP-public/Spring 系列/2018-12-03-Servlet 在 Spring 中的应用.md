@@ -33,7 +33,7 @@ Servlet
 
 ### Servlet 组件 
 
-![1543771118371](assets/1543771118371.png)
+![1543771118371](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543771118371.png)
 
 ### 组件：
 
@@ -49,11 +49,11 @@ Servlet
 
 
 
-![1543771183015](assets/1543771183015.png)
+![1543771183015](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543771183015.png)
 
 
 
-![1543771196194](assets/1543771196194.png)
+![1543771196194](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543771196194.png)
 
 
 
@@ -431,7 +431,7 @@ public AbstractApplicationContext(@Nullable ApplicationContext parent) {
 
 Root_web 先启动，Servlet 再启动，分析一下。
 
-![1543794002937](assets/1543794002937.png)
+![1543794002937](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543794002937.png)
 
 
 
@@ -683,7 +683,7 @@ WebApplicationContext wac = null;
 
 ​	Spring 是利用了 Servlet 的一些机制来完成他的操作。
 
-![1543813710060](assets/1543813710060.png)
+![1543813710060](/img/mercyblitz/GP-public/Spring%20%E7%B3%BB%E5%88%97/assets/1543813710060.png)
 
 
 
