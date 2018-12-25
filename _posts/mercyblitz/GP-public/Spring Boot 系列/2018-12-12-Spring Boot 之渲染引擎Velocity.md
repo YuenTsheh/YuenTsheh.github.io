@@ -194,7 +194,7 @@ public class VelocityProperties extends AbstractTemplateViewResolverProperties {
 
 
 
-![1544674761958](assets/1544674761958.png)
+![1544674761958](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1544674761958.png)
 
 
 
@@ -264,7 +264,7 @@ spring.velocity.prefix=/velocity/
 
 
 
-![1544676280464](assets/1544676280464.png)
+![1544676280464](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1544676280464.png)
 
 
 

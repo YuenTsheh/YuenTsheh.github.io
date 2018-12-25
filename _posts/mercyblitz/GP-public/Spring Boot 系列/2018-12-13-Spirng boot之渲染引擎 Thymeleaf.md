@@ -67,7 +67,7 @@ Restful 是 http 协议的一种规范。
 
 
 
-![1544677600021](assets/1544677600021.png)
+![1544677600021](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1544677600021.png)
 
 资源管理，
 
@@ -402,7 +402,7 @@ public class ThymeleafEngineDemo {
 
 
 
-![1544721974407](assets/1544721974407.png)
+![1544721974407](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1544721974407.png)
 
 
 

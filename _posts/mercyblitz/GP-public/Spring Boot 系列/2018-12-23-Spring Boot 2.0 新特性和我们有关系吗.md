@@ -23,7 +23,7 @@ tags:
 
 #### Spring Boot 2.0 官方图：
 
-![img](assets/diagram-boot-reactor.svg) 
+![img](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/diagram-boot-reactor.svg) 
 
 
 
@@ -93,7 +93,7 @@ WebFlux 并不是想要替换 WebMVC
 >
 > A natural question to ask but one that sets up an unsound dichotomy. Actually, both work together to expand the range of available options. The two are designed for continuity and consistency with each other, they are available side by side, and feedback from each side benefits both sides. The following diagram shows how the two relate, what they have in common, and what each supports uniquely:
 >
-> ![spring mvc and webflux venn](assets/spring-mvc-and-webflux-venn-1545538382341.png)
+> ![spring mvc and webflux venn](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/spring-mvc-and-webflux-venn-1545538382341.png)
 >
 > We suggest that you consider the following specific points:
 >
@@ -181,11 +181,11 @@ reacive 在构建的时候都会产生数据。
 
 > https://blog.ippon.tech/spring-5-webflux-performance-tests/
 >
-> ![Results with MySql](assets/Capture-d--cran-de-2017-07-18-16-57-27.png) 
+> ![Results with MySql](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/Capture-d--cran-de-2017-07-18-16-57-27.png) 
 >
-> ![img](assets/Capture-d--cran-de-2017-07-18-11-31-26.png) 
+> ![img](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/Capture-d--cran-de-2017-07-18-11-31-26.png) 
 >
-> ![img](assets/Capture-d--cran-de-2017-07-18-11-31-36.png) 
+> ![img](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/Capture-d--cran-de-2017-07-18-11-31-36.png) 
 >
 > # Conclusion
 >
@@ -221,7 +221,7 @@ ns 10^-9^
 
 #### 图解 Reactive:
 
-![1545541089003](assets/1545541089003.png)
+![1545541089003](/img/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1545541089003.png)
 
 
 
