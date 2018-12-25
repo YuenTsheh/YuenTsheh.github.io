@@ -72,7 +72,7 @@ tags:
 
 ##### 架构图：
 
-![1544543394328](assets/1544543394328.png)
+![1544543394328](/_posts/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1544543394328.png)
 
 `javax.servlet.http.HttpServlet ` 里边是 get 方法 和 post 方法都有。
 
@@ -181,7 +181,7 @@ public class SpringBootJspApplication   {
 
 
 
-![1544592340361](assets/1544592340361.png)
+![1544592340361](/_posts/mercyblitz/GP-public/Spring%20Boot%20%E7%B3%BB%E5%88%97/assets/1544592340361.png)
 
 
 
