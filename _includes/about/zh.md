@@ -26,3 +26,10 @@
 - Eureka 、Zuul、Ribbon、Feign、Hystrix、Config、Sleuth、Zipkin、Zookeeper、Spring Cloud Stream、Kafka 等技术开发微服务架构的分布式系统
 - MySQL 关系型数据及Redis 数据库
 - Nginx 、MyBatis 框架
+
+
+
+## WeChat:
+
+![1544543394328](/img/wechat.jpg)
+
