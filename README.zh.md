@@ -437,7 +437,7 @@ tags:
 
 ### portfolio/index.html
 
-```
+```html
 <header>
     <!-- <img width="175" height="175" style="border-radius:50%;" src="/img/avatar-hux-ny.jpg"> -->
     <!-- <h1>Hux</h1> -->
@@ -457,8 +457,10 @@ tags:
                 北京爱医生智慧医疗科技有限公司是君正集团全资子公司，与世界科技巨头IBM公司深度战略合作，应用世界领先的认知医疗和人工智能技术，致力于打造国内创新智慧医疗平台爱医生携手医疗健康行业生态合作伙伴，基于人工智能技术和医疗健康数据，共同推动中国医疗健康领域创新，致力于成为中国家庭全面健康管理的顾问，基层医疗机构全科医生的助手，助力分级诊疗政策落地和健康中国战略实施
             </li>
             <li class="skill">
-                <span><b>JS</b></span>
-                <span class="i-react"></span>
+                <span class="i-vue"></span>
+                <span class="i-spring-framework"></span>
+                <span class="i-spring-boot"></span>
+                <span class="i-spring-cloud"></span>
                 <span class="link"><a target="_blank" href="http://aiyisheng.com.cn/index.html">See it</a></span>
             </li>
         </ul>
@@ -478,7 +480,7 @@ tags:
 
 - \portfolio\css\timeline.css
 
-  - ```
+  - ```css
     .i-vue:before {
     	content: "";
         display: block;
@@ -526,50 +528,15 @@ tags:
     ```
 
     - ```
-      .i-vue:before {
-      	content: "";
-          display: block;
-          width: 40px;
-          height: 40px;
-          background: url("../images/logo-vue.png") 50% 50% no-repeat;
-          background-size: 20px;
-      }
+      i-vue
       
-      .i-spring-framework:before {
-      	content: "";
-      	display: block;
-      	width: 40px;
-      	height: 40px;
-      	background: url("../images/logo-spring-framework.png") 50% 50% no-repeat;
-      	background-size: 22px;
-      }
+      i-spring-framework
       
-      .i-spring-boot:before {
-      	content: "";
-      	display: block;
-      	width: 40px;
-      	height: 40px;
-      	background: url("../images/logo-spring-boot.png") 50% 50% no-repeat;
-      	background-size: 22px;
-      }
+      i-spring-boot
       
-      .i-spring-cloud:before {
-      	content: "";
-      	display: block;
-      	width: 40px;
-      	height: 40px;
-      	background: url("../images/logo-spring-cloud.png") 50% 50% no-repeat;
-      	background-size: 22px;
-      }
+      i-spring-cloud
       
-      .i-logo-spring-data-flow:before {
-      	content: "";
-      	display: block;
-      	width: 40px;
-      	height: 40px;
-      	background: url("../images/logo-spring-data-flow.png") 50% 50% no-repeat;
-      	background-size: 22px;
-      }
+      i-logo-spring-data-flow
       ```
 
     - 
