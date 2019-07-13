@@ -1653,7 +1653,7 @@ img::-moz-selection {
 }
 
 
-.i.fa.fa-wechat.a-stack-1x.fa-inverse::hover::after{
+.i.fa.fa-wechat.a-stack-1x.fa-inverse :hover{
   content:'';
   width:120px;
   height:120px;
