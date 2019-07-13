@@ -181,6 +181,44 @@ body, html {
 	background-size: 22px;
 }
 
+.i-spring-framework:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-spring-framework.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+.i-spring-boot:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-spring-boot.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+.i-spring-cloud:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-spring-cloud.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+.i-logo-spring-data-flow:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-spring-data-flow.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+
+
 /******* Hux Branch *****/
 
 /* navbar - dark mode */

@@ -361,7 +361,7 @@ friends: [
 
 
 
-# 文章名字规则
+### 文章名字规则
 
 2018-01-01-第一篇实例文章.md
 
@@ -435,7 +435,7 @@ tags:
 
 ## 添加项目：
 
-## portfolio/index.html
+### portfolio/index.html
 
 ```
 <header>
@@ -465,4 +465,112 @@ tags:
     </div>
 </li>
 ```
+
+
+
+#### 设计 项目下边的 log- Log
+
+添加图片
+
+- <!-- portfolio/images -->
+
+- 设计 JS
+
+- \portfolio\css\timeline.css
+
+  - ```
+    .i-vue:before {
+    	content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url("../images/logo-vue.png") 50% 50% no-repeat;
+        background-size: 20px;
+    }
+    
+    .i-spring-framework:before {
+    	content: "";
+    	display: block;
+    	width: 40px;
+    	height: 40px;
+    	background: url("../images/logo-spring-framework.png") 50% 50% no-repeat;
+    	background-size: 22px;
+    }
+    
+    .i-spring-boot:before {
+    	content: "";
+    	display: block;
+    	width: 40px;
+    	height: 40px;
+    	background: url("../images/logo-spring-boot.png") 50% 50% no-repeat;
+    	background-size: 22px;
+    }
+    
+    .i-spring-cloud:before {
+    	content: "";
+    	display: block;
+    	width: 40px;
+    	height: 40px;
+    	background: url("../images/logo-spring-cloud.png") 50% 50% no-repeat;
+    	background-size: 22px;
+    }
+    
+    .i-logo-spring-data-flow:before {
+    	content: "";
+    	display: block;
+    	width: 40px;
+    	height: 40px;
+    	background: url("../images/logo-spring-data-flow.png") 50% 50% no-repeat;
+    	background-size: 22px;
+    }
+    ```
+
+    - ```
+      .i-vue:before {
+      	content: "";
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: url("../images/logo-vue.png") 50% 50% no-repeat;
+          background-size: 20px;
+      }
+      
+      .i-spring-framework:before {
+      	content: "";
+      	display: block;
+      	width: 40px;
+      	height: 40px;
+      	background: url("../images/logo-spring-framework.png") 50% 50% no-repeat;
+      	background-size: 22px;
+      }
+      
+      .i-spring-boot:before {
+      	content: "";
+      	display: block;
+      	width: 40px;
+      	height: 40px;
+      	background: url("../images/logo-spring-boot.png") 50% 50% no-repeat;
+      	background-size: 22px;
+      }
+      
+      .i-spring-cloud:before {
+      	content: "";
+      	display: block;
+      	width: 40px;
+      	height: 40px;
+      	background: url("../images/logo-spring-cloud.png") 50% 50% no-repeat;
+      	background-size: 22px;
+      }
+      
+      .i-logo-spring-data-flow:before {
+      	content: "";
+      	display: block;
+      	width: 40px;
+      	height: 40px;
+      	background: url("../images/logo-spring-data-flow.png") 50% 50% no-repeat;
+      	background-size: 22px;
+      }
+      ```
+
+    - 
 
