@@ -217,6 +217,24 @@ body, html {
 	background-size: 22px;
 }
 
+.i-logo-dubbo:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-dubbo.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
+.i-logo-sofastacks:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-sofastacks.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
+
 
 
 /******* Hux Branch *****/
