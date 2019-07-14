@@ -1,6 +1,6 @@
 
     $('.log-wechat-darian').on('mousemove', function(ev) {
-    var left = ev.clientX - 170
+    var left = ev.clientX - 85
     var top = ev.clientY - 170
     $('.log-wechat-darian-img').css({
         top: top + 'px',
