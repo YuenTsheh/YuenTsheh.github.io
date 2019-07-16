@@ -62,7 +62,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: darian
+# disqus_username: darian
 
 # Netease settings
 netease_comment: false
@@ -112,7 +112,7 @@ friends: [
         href: "https://mercyblitz.github.io/"
     },
     {
-        title: "特别推荐：yuequan Blog",
+        title: "yuequan Blog",
         href: "http://yuequan.org/"
     },
     {

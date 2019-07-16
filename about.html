@@ -52,3 +52,21 @@ multilingual: true
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
+
+
+
+<!-- 2019-07-16 添加 gitment 评论 -->
+<div id="commentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+        var gitment = new Gitment({
+            owner: 'Darian19960',
+            repo: 'issue-for-Darian1996-gitpage',
+            oauth: {
+                client_id: '209b39ed3cbb229b680b',
+                client_secret: '71d40dfe89f96c267381fe697130195a8356cf36',
+            },
+        })
+gitment.render('commentContainer')
+</script>
