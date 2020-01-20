@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>darian-private-docs-serach.html</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        var searchUrl = "http://localhost:8080";
+
+        // 监听 enter 事件, return false 禁止页面刷新
+        $(function () {
+            $(document).keydown(function (event) {
+                if (event.keyCode == 13) {
+                    $("#submit_button_id").click();
+                    // return false 禁止页面刷新
+                    return false;
+                }
+            });
+        });
+
+
+        function submit_button_onclick() {
+            var parm_value = $('#parm_id').val();
+            // alert("parm_value:" + parm_value);
+            if (!parm_value) {
+                $('#notifyMsg_id').html("请输入关键词");
+            }
+            document.cookie = "parm=" + parm_value;
+            // alert(getCookie("parm"));
+
+            $.ajax({
+                url: searchUrl,
+                type: 'get',
+                dataType: 'json',
+                data: "parm=" + parm_value,
+                beforeSend: function () {
+                    $('#notifyMsg_id').html("Please waiting, Loading data ....");
+                },
+                success: function (datas) {
+                    $('#notifyMsg_id').html(datas.notifyMsg);
+                    $('#parm_id').html(datas.parm);
+                    var table_tbody_id_html = "";
+
+                    for (var i = 0; i < datas.customerFileList.length; i++) {
+                        var name = datas.customerFileList[i].name;
+                        var content = datas.customerFileList[i].content;
+                        var gitHubUrl = datas.customerFileList[i].gitHubUrl;
+                        var giteeUrl = datas.customerFileList[i].giteeUrl;
+                        // alert(name + "-" + content + "-" + giteeUrl + "-" + giteeUrl);
+                        $('#customerFile_name_id').html()
+
+                        table_tbody_id_html += "<tr  style=\"background-color: white\">";
+                        table_tbody_id_html += "<td  style=\"width: 250px; word-break:break-all;\">" +
+                            name +
+                            "</td>";
+                        table_tbody_id_html += "<td style=\"width: 1000px; word-break:break-all;\">" +
+                            content +
+                            "</td>";
+                        table_tbody_id_html += "<td align=\"center\" style=\"cursor:pointer; width: 10px; color: #2d78f4\">\n" +
+                            "<a th:href=\'" + gitHubUrl + "\' target=\"_blank\">GitHub</a>\n" +
+                            "</td>"
+                        table_tbody_id_html += "<td align=\"center\" style=\"cursor:pointer; width: 10px; color: #2d78f4\">\n" +
+                            "<a th:href=\'" + giteeUrl + "\' target=\"_blank\">Gitee</a>\n" +
+                            "</td>"
+                    }
+                    $('#table_tbody_id').html(table_tbody_id_html);
+                }
+                ,
+                error: function (xhr, state, errorThrown) {
+                    $('#notifyMsg_id').html("查询出错，请联系管理员！！！");
+                }
+
+            })
+        };
+
+        // 监听页面的 onload 事件，打开事件
+        window.onload = function () {
+            bodyOnLoad();
+        }
+
+        // 用户关闭页面或刷新浏览器时会触发onunload事件
+        function bodyOnLoad() {
+            $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+            // alert("getCookie: " + getCookie("parm"));
+            var parm_value = getCookie("parm");
+            if (!parm_value) {
+                // cookie 取不到值，不调用 onClick 方法
+                return false;
+            }
+            $('#parm_id').val(parm_value);
+            submit_button_onclick();
+        };
+
+        // 获取 Cookie 的 value
+        function getCookie(name) {
+            //可以搜索RegExp和match进行学习
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg)) {
+                return unescape(arr[2]);
+            } else {
+                return null;
+            }
+        }
+
+        // 这个方法可以判断  这个tmp可以是undefined,NaN,下面的判断都会返回true.
+        function isUndefined() {
+            var tmp = null; //这个tmp可以是undefined,NaN,下面的判断都会返回true.
+            if (!tmp) {
+                alert("null or undefined or NaN");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+<h2 id="notifyMsg_id" bgcolor="white"
+    style="color: crimson;align-content: center"
+    align="center">欢迎你！！！</h2>
+
+<div align="center">
+    <form id="form">
+    <span>
+<!--        <span>-->
+        <!--        </span>-->
+        <input id="parm_id" maxlength="255" autocomplete="off"
+               style="background-color: lavender; color: black;
+               width:550px; height:42px; font-size:25px;"/>
+    </span>
+
+        <span>
+
+    <input type="button" id="submit_button_id" value="Search" class="bg s_btn"
+           style="background-color: #2d78f4; color: white ;
+           width:120px; height:42px; font-size:25px;" onclick="submit_button_onclick()"/>
+    </span>
+
+    </form>
+</div>
+
+
+<br/>
+<!-- border 外边框-->
+<!-- cellpadding 内边距-->
+<table cellpadding="10" cellspacing="0" width="1200px" align="center"
+       style="border-color: #7b7b7b " border="5px" bordercolor="#777272" bgcolor="#e6e5e5">
+    <thead>
+    <th width="100px">标题</th>
+    <th>文章内容</th>
+    <th width="10px">Github</th>
+    <th width="10px">Gitee</th>
+    </thead>
+
+    <tbody id="table_tbody_id">
+    <tr style="background-color: white">
+        <!-- word-break:break-all; 自动换行 -->
+        <td style="width: 250px; word-break:break-all;"></td>
+        <td style="width: 1000px; word-break:break-all;"></td>
+        <td align="center" style="cursor:pointer; width: 10px; color: #2d78f4">
+            <a target="_blank"></a>
+        </td>
+        <td align="center" style="cursor:pointer; width: 10px; color: #2d78f4">
+            <a target="_blank"></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
