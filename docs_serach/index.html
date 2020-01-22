@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <!--    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">-->
     <title>darian-private-docs-serach.html</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -73,6 +72,7 @@
                 url: searchUrl,
                 type: 'get',
                 dataType: 'json',
+                changeOrigin: true, // 是否跨域
                 data: "parm=" + encodeURIComponent(parm_value),
                 beforeSend: function (XMLHttpRequest) {
                     $('#notifyMsg_id').html("Please waiting, Loading data ....");
@@ -143,18 +143,20 @@
             if (new RegExp("^http://localhost").test(location.href)) {
                 searchUrl = "http://localhost:8080/";
             } else if (new RegExp("^https://darian1996.github.io/").test(location.href)) {
-                searchUrl = "http://39.105.143.0:80/";
+                searchUrl = "http://39.105.143.0/";
+            } else if (new RegExp("^http://39.105.143.0/").test(location.href)) {
+                searchUrl = "http://39.105.143.0/";
             }
 
             consoleCookieValue();
 
-            //var notifyMsg = [[${notifyMsg}]];
+            var notifyMsg = [[${notifyMsg}]];
 
-            //if (!notifyMsg) {
-            $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
-            // } else {
-            //  $('#notifyMsg_id').html(notifyMsg);
-            //}
+            if (!notifyMsg) {
+                $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+            } else {
+                $('#notifyMsg_id').html(notifyMsg);
+            }
             // alert("getCookie: " + getCookie("parm"));
             var parm_value = getCookie("parm");
             if (!parm_value) {
