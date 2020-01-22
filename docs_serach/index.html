@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+    <!--    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">-->
     <title>darian-private-docs-serach.html</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>
+
+
+    <script th:inline="javascript">
         var searchUrl = "http://localhost:8080";
 
         // 监听 enter 事件, return false 禁止页面刷新
@@ -19,25 +21,65 @@
             });
         });
 
+        function replaceIllegalStr(str) {
+            var reg;
+            var illegal_list = ["/", "\\",
+                "[", "]",
+                "{", "}",
+                "<", ">",
+                "＜", "＞",
+                "「", "」",
+                "：", "；",
+                "、", "•",
+                "^", "'", "\"",
+                "\r", "\r\n", "\\n", "\n"];
+            for (var i = 0; i < illegal_list.length; i++) {
+                if (str.indexOf(illegal_list[i]) >= 0) {
+                    if (illegal_list[i] == '\\' || illegal_list[i] == '[') {
+                        reg = new RegExp('\\' + illegal_list[i], "g");
+                    } else {
+                        reg = new RegExp(illegal_list[i], "g");
+                    }
+                    str = str.replace(reg, '');
+                }
+            }
+            return str.trim();
+        };
 
         function submit_button_onclick() {
-            var parm_value = $('#parm_id').val();
+            var token_value = getCookie("token_key");
+            var parm_value_old = $('#parm_id').val();
+
+            if (!token_value) {
+                $('#notifyMsg_id').html("用户没有登录 ... ... ");
+                $('#table_tbody_id').html("");
+                return false;
+            }
             // alert("parm_value:" + parm_value);
-            if (!parm_value) {
-                $('#notifyMsg_id').html("请输入关键词");
+            parm_value = replaceIllegalStr(parm_value_old)
+            if (parm_value_old != parm_value) {
+                $('#notifyMsg_id').html("自动去除非法字符 ... ... ");
             }
             document.cookie = "parm=" + parm_value;
-            // alert(getCookie("parm"));
+            $('#parm_id').val(parm_value);
+            if (!parm_value || parm_value == "") {
+                $('#notifyMsg_id').html("请输入关键词 ... ... ");
+                $('#table_tbody_id').html("");
+                return false;
+            }
 
             $.ajax({
                 url: searchUrl,
                 type: 'get',
                 dataType: 'json',
-                data: "parm=" + parm_value,
-                beforeSend: function () {
+                data: "parm=" + encodeURIComponent(parm_value),
+                beforeSend: function (XMLHttpRequest) {
                     $('#notifyMsg_id').html("Please waiting, Loading data ....");
+                    // alert(token_value);
+                    XMLHttpRequest.setRequestHeader("token_key", token_value);
                 },
-                success: function (datas) {
+                success: function (datas, state) {
+                    // alert(state);
                     $('#notifyMsg_id').html(datas.notifyMsg);
                     $('#parm_id').html(datas.parm);
                     var table_tbody_id_html = "";
@@ -51,18 +93,21 @@
                         $('#customerFile_name_id').html()
 
                         table_tbody_id_html += "<tr  style=\"background-color: white\">";
-                        table_tbody_id_html += "<td  style=\"width: 250px; word-break:break-all;\">" +
+                        table_tbody_id_html += "<td  style=\"/*width: 250px*/; word-break:break-all;\">" +
                             name +
+                            "<br/><br/><a href=\'" + gitHubUrl + "\' target=\"_blank\" style='color: #2d78f4'>GitHub</a>\n" +
+                            "<br/><a href=\'" + giteeUrl + "\' target=\"_blank\" style='color: #2d78f4'>Gitee</a>\n" +
                             "</td>";
-                        table_tbody_id_html += "<td style=\"width: 1000px; word-break:break-all;\">" +
+                        table_tbody_id_html += "<td style=\"/*width: 1000px;*/ word-break:break-all;\">" +
                             content +
                             "</td>";
-                        table_tbody_id_html += "<td align=\"center\" style=\"cursor:pointer; width: 10px; color: #2d78f4\">\n" +
-                            "<a th:href=\'" + gitHubUrl + "\' target=\"_blank\">GitHub</a>\n" +
-                            "</td>"
-                        table_tbody_id_html += "<td align=\"center\" style=\"cursor:pointer; width: 10px; color: #2d78f4\">\n" +
-                            "<a th:href=\'" + giteeUrl + "\' target=\"_blank\">Gitee</a>\n" +
-                            "</td>"
+                        // table_tbody_id_html += "<td align=\"center\" style=\"cursor:pointer; width: 10px; color: #2d78f4\">\n" +
+                        //     "<a th:href=\'" + gitHubUrl + "\' target=\"_blank\">GitHub</a>\n" +
+                        //     "</td>"
+                        // table_tbody_id_html += "<td align=\"center\" style=\"cursor:pointer; width: 10px; color: #2d78f4\">\n" +
+                        //     "<a th:href=\'" + giteeUrl + "\' target=\"_blank\">Gitee</a>\n" +
+                        //     "</td>"
+                        table_tbody_id_html += "</tr>";
                     }
                     $('#table_tbody_id').html(table_tbody_id_html);
                 }
@@ -79,9 +124,36 @@
             bodyOnLoad();
         }
 
+        // 打印出来 cookie
+        function consoleCookieValue() {
+            console.log("document.cookie=\"token_key=token_value\"");
+            console.log("-");
+            console.log("document.cookie=\"token_key=\"");
+            console.log("-");
+            console.log("document.cookie");
+            console.log("-");
+            console.log(document.cookie);
+        }
+
         // 用户关闭页面或刷新浏览器时会触发onunload事件
         function bodyOnLoad() {
-            $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+            // 当前网页的地址
+            // alert(location.href);
+            if (new RegExp("^http://localhost").test(location.href)) {
+                searchUrl = "http://localhost:8080/";
+            } else if (new RegExp("^https://darian1996.github.io/").test(location.href)) {
+                searchUrl = "http://localhost:8080/";
+            }
+
+            consoleCookieValue();
+
+            var notifyMsg = [[${notifyMsg}]];
+
+            if (!notifyMsg) {
+                $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+            } else {
+                $('#notifyMsg_id').html(notifyMsg);
+            }
             // alert("getCookie: " + getCookie("parm"));
             var parm_value = getCookie("parm");
             if (!parm_value) {
@@ -89,6 +161,8 @@
                 return false;
             }
             $('#parm_id').val(parm_value);
+
+
             submit_button_onclick();
         };
 
@@ -114,59 +188,53 @@
     </script>
 </head>
 
-<body>
+<div>
+    <div align="center">
+        <h2 id="notifyMsg_id" bgcolor="white"
+            style="color: crimson;align-content: center;  width: 70%"
+            align="center"></h2>
+    </div>
+    <div align="center">
+        <form id="form">
+            <input id="parm_id" maxlength="255" autocomplete="off"
+                   style="background-color: lavender; color: black;
+               width:50%; height:42px; font-size:25px;"/>
 
-<h2 id="notifyMsg_id" bgcolor="white"
-    style="color: crimson;align-content: center"
-    align="center">欢迎你！！！</h2>
 
-<div align="center">
-    <form id="form">
-    <span>
-<!--        <span>-->
-        <!--        </span>-->
-        <input id="parm_id" maxlength="255" autocomplete="off"
-               style="background-color: lavender; color: black;
-               width:550px; height:42px; font-size:25px;"/>
-    </span>
+            <input type="button" id="submit_button_id" value="Search" class="bg s_btn"
+                   style="background-color: #2d78f4; color: white ;
+           width:10%; height:42px; font-size:25px;" onclick="submit_button_onclick()"/>
 
-        <span>
+        </form>
+    </div>
 
-    <input type="button" id="submit_button_id" value="Search" class="bg s_btn"
-           style="background-color: #2d78f4; color: white ;
-           width:120px; height:42px; font-size:25px;" onclick="submit_button_onclick()"/>
-    </span>
 
-    </form>
+    <br/>
+    <!-- border 外边框-->
+    <!-- cellpadding 内边距-->
+    <table cellpadding="10" cellspacing="0" width="90%" align="center"
+           style="border-color: #7b7b7b " border="5px" bordercolor="#777272" bgcolor="#e6e5e5">
+        <thead>
+        <th width="150px">标题</th>
+        <th>文章内容</th>
+        <!--        <th width="10px">Github</th>-->
+        <!--        <th width="10px">Gitee</th>-->
+        </thead>
+
+        <tbody id="table_tbody_id">
+        <!--        <tr style="background-color: white">-->
+        <!--            &lt;!&ndash; word-break:break-all; 自动换行 &ndash;&gt;-->
+        <!--            <td style="width: 250px; word-break:break-all;"></td>-->
+        <!--            <td style="width: 1000px; word-break:break-all;"></td>-->
+        <!--            <td align="center" style="cursor:pointer; width: 10px; color: #2d78f4">-->
+        <!--                <a target="_blank"></a>-->
+        <!--            </td>-->
+        <!--            <td align="center" style="cursor:pointer; width: 10px; color: #2d78f4">-->
+        <!--                <a target="_blank"></a>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        </tbody>
+    </table>
+
 </div>
-
-
-<br/>
-<!-- border 外边框-->
-<!-- cellpadding 内边距-->
-<table cellpadding="10" cellspacing="0" width="1200px" align="center"
-       style="border-color: #7b7b7b " border="5px" bordercolor="#777272" bgcolor="#e6e5e5">
-    <thead>
-    <th width="100px">标题</th>
-    <th>文章内容</th>
-    <th width="10px">Github</th>
-    <th width="10px">Gitee</th>
-    </thead>
-
-    <tbody id="table_tbody_id">
-    <tr style="background-color: white">
-        <!-- word-break:break-all; 自动换行 -->
-        <td style="width: 250px; word-break:break-all;"></td>
-        <td style="width: 1000px; word-break:break-all;"></td>
-        <td align="center" style="cursor:pointer; width: 10px; color: #2d78f4">
-            <a target="_blank"></a>
-        </td>
-        <td align="center" style="cursor:pointer; width: 10px; color: #2d78f4">
-            <a target="_blank"></a>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-</body>
 </html>
