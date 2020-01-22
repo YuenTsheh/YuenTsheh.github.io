@@ -48,7 +48,7 @@
         };
 
         function submit_button_onclick() {
-            var token_value = getCookie("token_key");
+            var token_value = getCookie("token-key");
             var parm_value_old = $('#parm_id').val();
 
             if (!token_value) {
@@ -77,7 +77,7 @@
                 beforeSend: function (XMLHttpRequest) {
                     $('#notifyMsg_id').html("Please waiting, Loading data ....");
                     // alert(token_value);
-                    XMLHttpRequest.setRequestHeader("token_key", token_value);
+                    XMLHttpRequest.setRequestHeader("token-key", token_value);
                 },
                 success: function (datas, state) {
                     // alert(state);
@@ -127,9 +127,9 @@
 
         // 打印出来 cookie
         function consoleCookieValue() {
-            console.log("document.cookie=\"token_key=token_value\"");
+            console.log("document.cookie=\"token-key=token_value\"");
             console.log("-");
-            console.log("document.cookie=\"token_key=\"");
+            console.log("document.cookie=\"token-key=\"");
             console.log("-");
             console.log("document.cookie");
             console.log("-");
