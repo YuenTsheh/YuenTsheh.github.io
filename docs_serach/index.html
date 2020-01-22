@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
-    <script th:inline="javascript">
+    <script>
         var searchUrl = "http://localhost:8080";
 
         // 监听 enter 事件, return false 禁止页面刷新
@@ -150,13 +150,13 @@
 
             consoleCookieValue();
 
-            var notifyMsg = [[${notifyMsg}]];
+            // var notifyMsg = [[${notifyMsg}]];
 
-            if (!notifyMsg) {
-                $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
-            } else {
-                $('#notifyMsg_id').html(notifyMsg);
-            }
+            // if (!notifyMsg) {
+            $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+            // } else {
+            //     $('#notifyMsg_id').html(notifyMsg);
+            // }
             // alert("getCookie: " + getCookie("parm"));
             var parm_value = getCookie("parm");
             if (!parm_value) {
