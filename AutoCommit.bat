@@ -1,3 +1,4 @@
+
 ﻿:: 这条命令使用当前时间来作为 commit 的信息
 set commit_msg= %date:~0,10%   %time% AutoCommit.bat by Darian
 git status 

@@ -1,8 +1,9 @@
-:: ÉèÖÃ Git home:
+
+:: ï¿½ï¿½ï¿½ï¿½ Git home:
 set  Git_HOME_PATH = "C:\anzhuang\Git\cmd"
 
 
-:: Ìí¼Ó Git cmd »·¾³
+:: ï¿½ï¿½ï¿½ Git cmd ï¿½ï¿½ï¿½ï¿½
 SETX /M Path  "%Path%;%Git_HOME_PATH%"
 
 pause

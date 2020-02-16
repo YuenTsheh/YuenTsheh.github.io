@@ -1,9 +1,10 @@
+
 :: cd D:\z_my_gitHub_repositories\gp-docs
 
-:: 加入你要自己输入 commit message
+:: 锟斤拷锟斤拷锟斤拷要锟皆硷拷锟斤拷锟斤拷 commit message
 :: set /p commit_msg=Please input commit message:
 
-:: 这条命令使用当前时间来作为 commit 的信息
+:: 锟斤拷锟斤拷锟斤拷锟斤拷使锟矫碉拷前时锟斤拷锟斤拷锟斤拷为 commit 锟斤拷锟斤拷息
 set  commit_msg= %date:~0,10%   %time% AutoCommit.bat by Darian
 
 git status 

@@ -1,3 +1,4 @@
+
 $(function() {
   // 标题等信息
   var titles = []
@@ -12,25 +13,25 @@ $(function() {
     dataType: 'html',
     cache: true,
     timeout: 10000,
-    success: function(data) {
+    success: function (data) {
       searchData = data
       $('.page-search h1 img').css('opacity', 0)
       $(data)
-        .find('li')
-        .each(function(i, v) {
-          contents.push($(v).html())
-        })
-      $('.list-search .title-me').each(function(i, v) {
+          .find('li')
+          .each(function (i, v) {
+            contents.push($(v).html())
+          })
+      $('.list-search .title-me').each(function (i, v) {
         titles.push($(v).html())
       })
       search($('#search-input').val())
     },
-    error: function(err) {
+    error: function (err) {
       console.error('全文检索数据加载失败...')
     }
   })
 
-  $('#search-input').on('input', function() {
+  $('#search-input').on('input', function () {
     search($(this).val())
   })
 
@@ -52,12 +53,13 @@ $(function() {
       '(',
       ')'
     ]
-    arr.forEach(function(c) {
+    arr.forEach(function (c) {
       var r = new RegExp('\\' + c, 'g')
       str = str.replace(r, '\\' + c)
     })
     return str
   }
+
   function search(key) {
     if (!searchData) {
       return
@@ -65,9 +67,9 @@ $(function() {
     // <>& 替换
     key = $.trim(key)
     key = key
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/&/g, '&amp;')
 
     var doms = document.querySelectorAll('.list-search .post-preview')
     var h1 = '<span class="hint">'

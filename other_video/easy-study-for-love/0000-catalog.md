@@ -44,4 +44,3 @@
 ### everything
 
 [学习文档](<https://github.com/Darian1996/darian1996.github.io/blob/master/other_video/easy-study-for-love/everything%E4%BD%BF%E7%94%A8/everything%E4%BD%BF%E7%94%A8.md>)
-
