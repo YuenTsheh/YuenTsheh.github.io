@@ -1,12 +1,12 @@
-# typora 学习
+# Typora 学习
 
 [TOC]
 
 
 
-## [语法文档](<https://github.com/Darian1996/my-tools/blob/master/typora%20%E4%BD%BF%E7%94%A8/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83.md>) 
+## [语法文档](<https://github.com/Darian1996/my-tools/blob/master/typora%20%E4%BD%BF%E7%94%A8/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83.md>) ：
 
-[链接](<https://github.com/Darian1996/my-tools/blob/master/typora%20%E4%BD%BF%E7%94%A8/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83.md>) 
+请点击：[链接](<https://github.com/Darian1996/my-tools/blob/master/typora%20%E4%BD%BF%E7%94%A8/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83.md>) 
 
 > - 先对照 上边的 《typora 简单操练文档，就可以解决大多数 typora 的问题了》
 >
@@ -45,9 +45,13 @@
 
   - > typora 支持目录的自动生成，
     >
-    > 在文档的开始，直接输入 `[toc]`  就好了，
+    > 在文档的开始，直接输入 `[TOC]`  就好了，
     >
     > 这个语法不是 md 标准语法，github 不支持。
+    >
+    > 效果图：
+    >
+    > ![image-20200310030727376](assets/image-20200310030727376.png)
 
 - 导入：
 
@@ -76,25 +80,37 @@
 
 ### 鼠标右键新建可以弹出 `Markdown File` 选项
 
+#### 效果图
+
+![image-20200310030351354](assets/image-20200310030351354.png)
+
 - 首先，新建 文本框，然后，更改后缀名 `.md` ，选择打开方式，默认为 `typora` 打开。 
 
-  然后，
+- 然后，
 
+  新建文本文件，全名称为 `右键添加新建md文件.reg`  之后，文本编辑 
 
+  ```reg
+  Windows Registry Editor Version 5.00
+  [HKEY_CLASSES_ROOT\.md\ShellNew]
+  "NullFile"=""
+  "FileName"="template.md"
+  ```
 
-新建文本文件，全名称为 `右键添加新建md文件.reg`  之后，文本编辑
+  保存，运行，确定继续，就可以了。
 
-```reg
-Windows Registry Editor Version 5.00
-[HKEY_CLASSES_ROOT\.md\ShellNew]
-"NullFile"=""
-"FileName"="template.md"
-```
+- 如果还不行，那么新建 `右键添加新建md文件.reg` 内容，更改为
 
-保存，运行，
+  ```reg
+  Windows Registry Editor Version 5.00
+  [HKEY_CLASSES_ROOT\.md]
+  @="Typora.exe"
+  [HKEY_CLASSES_ROOT\.md\ShellNew]
+  "NullFile"=""
+  [HKEY_CLASSES_ROOT\Typora.exe]
+  @="Markdown"
+  ```
 
-确定继续，
-
-就可以了。
+  保存，运行，确定，看是否可以。
 
 
