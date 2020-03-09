@@ -1,243 +1,254 @@
-1. 横向流程图源码格式：
+1. markdown做为笔记记录，在方便不过，这里记录经常要用的流程图画法模版
 
-   \```mermaid
+   ## 工具/原料
 
-   graph LR
+   - typora
 
-   A[方形] -->B(圆角)
+   ## 方法/步骤
 
-   ​    B --> C{条件a}
+   1. 
 
-   ​    C -->|a=1| D[结果1]
+      横向流程图源码格式：
 
-   ​    C -->|a=2| E[结果2]
+      \```mermaid
 
-   ​    F[横向流程图]
+      graph LR
 
-   \```
+      A[方形] -->B(圆角)
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=2466ec608935e5dd902ca5df46c7a7f5/bd3eb13533fa828bcdba91d1f11f4134970a5a62.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=1)
+        B --> C{条件a}
 
-2. 
+        C -->|a=1| D[结果1]
 
-   竖向流程图源码格式：
+        C -->|a=2| E[结果2]
 
-   \```mermaid
+        F[横向流程图]
 
-   graph TD
+      \```
 
-   A[方形] -->B(圆角)
+      ![typora画流程图、时序图、甘特图](assets/bd3eb13533fa828bcdba91d1f11f4134970a5a62-1583782669272.jpg)
 
-   ​    B --> C{条件a}
+      竖向流程图源码格式：
 
-   ​    C -->|a=1| D[结果1]
+      \```mermaid
 
-   ​    C -->|a=2| E[结果2]
+      graph TD
 
-   ​    F[竖向流程图]
+      A[方形] -->B(圆角)
 
-   \```
+        B --> C{条件a}
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=b77421d7a16eddc426e7b4fb09dbb6a2/eac4b74543a98226767c24158682b9014a90eb47.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=2)
+        C -->|a=1| D[结果1]
 
-3. 
+        C -->|a=2| E[结果2]
 
-   标准流程图源码格式：
+        F[竖向流程图]
 
-   \```flow
+      \```
 
-   st=>start: 开始框
+      ![typora画流程图、时序图)、甘特图](assets/eac4b74543a98226767c24158682b9014a90eb47-1583782669277.jpg)
 
-   op=>operation: 处理框
+      
 
-   cond=>condition: 判断框(是或否?)
+   2. 
 
-   sub1=>subroutine: 子流程
+      标准流程图源码格式：
 
-   io=>inputoutput: 输入输出框
+      \```flow
 
-   e=>end: 结束框
+      st=>start: 开始框
 
-   
+      op=>operation: 处理框
 
-   st->op->cond
+      cond=>condition: 判断框(是或否?)
 
-   cond(yes)->io->e
+      sub1=>subroutine: 子流程
 
-   cond(no)->sub1(right)->op
+      io=>inputoutput: 输入输出框
 
-   \```
+      e=>end: 结束框
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=8ff1d0ed7ac6a7efb926a826cdfbafe9/a71ea8d3fd1f4134ffea704c291f95cad1c85e26.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=3)
+      
 
-4. 
+      st->op->cond
 
-   标准流程图源码格式（横向）：
+      cond(yes)->io->e
 
-   \```flow
+      cond(no)->sub1(right)->op
 
-   st=>start: 开始框
+      \```
 
-   op=>operation: 处理框
+      ![typora画流程图、时序图()、甘特图](assets/a71ea8d3fd1f4134ffea704c291f95cad1c85e26.jpg)
 
-   cond=>condition: 判断框(是或否?)
+      
 
-   sub1=>subroutine: 子流程
+   3. 
 
-   io=>inputoutput: 输入输出框
+      标准流程图源码格式（横向）：
 
-   e=>end: 结束框
+      \```flow
 
-   
+      st=>start: 开始框
 
-   st(right)->op(right)->cond
+      op=>operation: 处理框
 
-   cond(yes)->io(bottom)->e
+      cond=>condition: 判断框(是或否?)
 
-   cond(no)->sub1(right)->op
+      sub1=>subroutine: 子流程
 
-   \```
+      io=>inputoutput: 输入输出框
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=d901f51be7c4b7453494b716fffc1e78/03087bf40ad162d92187112e1ddfa9ec8a13cd93.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=4)
+      e=>end: 结束框
 
-5. 
+      
 
-   UML时序图源码样例：
+      st(right)->op(right)->cond
 
-   \```sequence
+      cond(yes)->io(bottom)->e
 
-   对象A->对象B: 对象B你好吗?（请求）
+      cond(no)->sub1(right)->op
 
-   Note right of 对象B: 对象B的描述
+      \```
 
-   Note left of 对象A: 对象A的描述(提示)
+      ![typora画流程图、时序图()、甘特图](assets/03087bf40ad162d92187112e1ddfa9ec8a13cd93.jpg)
 
-   对象B-->对象A: 我很好(响应)
+   4. 
 
-   对象A->对象B: 你真的好吗？
+      UML时序图源码样例：
 
-   \```
+      \```sequence
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=1acff8b5dca20cf44690fedf46094b0c/3b292df5e0fe9925ff7c166238a85edf8db1718b.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=5)
+      对象A->对象B: 对象B你好吗?（请求）
 
-6. 
+      Note right of 对象B: 对象B的描述
 
-   UML时序图源码复杂样例：
+      Note left of 对象A: 对象A的描述(提示)
 
-   \```sequence
+      对象B-->对象A: 我很好(响应)
 
-   Title: 标题：复杂使用
+      对象A->对象B: 你真的好吗？
 
-   对象A->对象B: 对象B你好吗?（请求）
+      \```
 
-   Note right of 对象B: 对象B的描述
+      ![typora画流程图、时序图()、甘特图](assets/3b292df5e0fe9925ff7c166238a85edf8db1718b.jpg)
 
-   Note left of 对象A: 对象A的描述(提示)
+   5. 
 
-   对象B-->对象A: 我很好(响应)
+      UML时序图源码复杂样例：
 
-   对象B->小三: 你好吗
+      \```sequence
 
-   小三-->>对象A: 对象B找我了
+      Title: 标题：复杂使用
 
-   对象A->对象B: 你真的好吗？
+      对象A->对象B: 对象B你好吗?（请求）
 
-   Note over 小三,对象B: 我们是朋友
+      Note right of 对象B: 对象B的描述
 
-   participant C
+      Note left of 对象A: 对象A的描述(提示)
 
-   Note right of C: 没人陪我玩
+      对象B-->对象A: 我很好(响应)
 
-   \```
+      对象B->小三: 你好吗
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=df59a9dfeb1190ef01fb92dffe1b9df7/32fa828ba61ea8d3a7730d369b0a304e251f58aa.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=6)
+      小三-->>对象A: 对象B找我了
 
-7. 
+      对象A->对象B: 你真的好吗？
 
-   UML标准时序图样例：
+      Note over 小三,对象B: 我们是朋友
 
-   \```mermaid
+      participant C
 
-   %% 时序图例子,-> 直线，-->虚线，->>实线箭头
+      Note right of C: 没人陪我玩
 
-     sequenceDiagram
+      \```
 
-   ​    participant 张三
+      ![typora画流程图、时序图、甘特图](assets/32fa828ba61ea8d3a7730d369b0a304e251f58aa.jpg)
 
-   ​    participant 李四
+   6. 
 
-   ​    张三->王五: 王五你好吗？
+      UML标准时序图样例：
 
-   ​    loop 健康检查
+      \```mermaid
 
-   ​        王五->王五: 与疾病战斗
+      %% 时序图例子,-> 直线，-->虚线，->>实线箭头
 
-   ​    end
+       sequenceDiagram
 
-   ​    Note right of 王五: 合理 食物 <br/>看医生...
+        participant 张三
 
-   ​    李四-->>张三: 很好!
+        participant 李四
 
-   ​    王五->李四: 你怎么样?
+        张三->王五: 王五你好吗？
 
-   ​    李四-->王五: 很好!
+        loop 健康检查
 
-   \```
+      ​    王五->王五: 与疾病战斗
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=c028fc1be7c4b7453494b716fffc1e78/03087bf40ad162d938ae182e1ddfa9ec8a13cd44.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=7)
+        end
 
-8. 
+        Note right of 王五: 合理 食物 <br/>看医生...
 
-   甘特图样例：
+        李四-->>张三: 很好!
 
-   \```mermaid
+        王五->李四: 你怎么样?
 
-   %% 语法示例
+        李四-->王五: 很好!
 
-   ​        gantt
+      \```
 
-   ​        dateFormat  YYYY-MM-DD
+      ![typora画流程图、时序图()、甘特图](assets/03087bf40ad162d938ae182e1ddfa9ec8a13cd44.jpg)
 
-   ​        title 软件开发甘特图
+   7. 
 
-   
+      甘特图样例：
 
-   ​        section 设计
+      \```mermaid
 
-   ​        需求                      :done,    des1, 2014-01-06,2014-01-08
+      %% 语法示例
 
-   ​        原型                      :active,  des2, 2014-01-09, 3d
+      ​    gantt
 
-   ​        UI设计                     :         des3, after des2, 5d
+      ​    dateFormat YYYY-MM-DD
 
-      	未来任务                     :         des4, after des3, 5d
+      ​    title 软件开发甘特图
 
-   
+      
 
-   ​        section 开发
+      ​    section 设计
 
-   ​        学习准备理解需求                      :crit, done, 2014-01-06,24h
+      ​    需求           :done,  des1, 2014-01-06,2014-01-08
 
-   ​        设计框架                             :crit, done, after des2, 2d
+      ​    原型           :active, des2, 2014-01-09, 3d
 
-   ​        开发                                 :crit, active, 3d
+      ​    UI设计           :     des3, after des2, 5d
 
-   ​        未来任务                              :crit, 5d
+        未来任务           :     des4, after des3, 5d
 
-   ​        耍                                   :2d
+      
 
-   ​    
+      ​    section 开发
 
-   ​        section 测试
+      ​    学习准备理解需求           :crit, done, 2014-01-06,24h
 
-   ​        功能测试                              :active, a1, after des3, 3d
+      ​    设计框架               :crit, done, after des2, 2d
 
-   ​        压力测试                               :after a1  , 20h
+      ​    开发                 :crit, active, 3d
 
-   ​        测试报告                               : 48h
+      ​    未来任务               :crit, 5d
 
-   \```
+      ​    耍                  :2d
 
-   [![typora画流程图、时序图(顺序图)、甘特图](https://imgsa.baidu.com/exp/w=500/sign=f971363a00d79123e0e094749d355917/fcfaaf51f3deb48fbfa5c7ecfc1f3a292df57837.jpg)](http://jingyan.baidu.com/album/48b558e3035d9a7f38c09aeb.html?picindex=8)
+        
 
- 
+      ​    section 测试
+
+      ​    功能测试               :active, a1, after des3, 3d
+
+      ​    压力测试                :after a1 , 20h
+
+      ​    测试报告                : 48h
+
+      \```
+
+      ![typora画流程图、时序图()、甘特图](assets/fcfaaf51f3deb48fbfa5c7ecfc1f3a292df57837.jpg)
+
