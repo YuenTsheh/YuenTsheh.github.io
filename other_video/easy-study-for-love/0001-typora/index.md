@@ -6,7 +6,7 @@
 
 
 
-## [语法文档]([https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83/](https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/typora简单操练/)) ：
+## 语法文档 ：
 
 - Markdown基本语法文档地址： 
   - [https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83/](https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/typora简单操练/) 
@@ -15,7 +15,7 @@
 
 
 
-请点击：[链接](<[https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/typora%E7%AE%80%E5%8D%95%E6%93%8D%E7%BB%83/](https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/typora简单操练/)>) 
+
 
 > - 先对照 上边的 《typora 简单操练文档，就可以解决大多数 typora 的问题了》
 >
@@ -42,8 +42,9 @@
 #### 图片插入 
 
 - （推荐使用 `复制图片到 ./assets 文件夹` ）
-  - 没有，选择，复制到 ${} 文件夹，更改为 `/assets`
-
+  
+- 没有，选择，复制到 ${} 文件夹，更改为 `/assets`
+  
 - 本地位置 **勾选** 
 
 - 网络位置 **勾选**  
