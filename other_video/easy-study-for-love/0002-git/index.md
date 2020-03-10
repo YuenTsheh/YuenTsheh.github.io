@@ -11,7 +11,9 @@
 
 ## 下载
 
-https://git-scm.com/downloads
+https://git-scm.com/downloads 
+
+淘宝镜像下载地址：https://npm.taobao.org/mirrors/git-for-windows/
 
 ## 安装
 
