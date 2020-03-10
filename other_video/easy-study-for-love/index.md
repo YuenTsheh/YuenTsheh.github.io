@@ -1,6 +1,8 @@
 
 
 > 构建 git + github + typora + google chrome (octotree)，构建目录式，多机器同步
+>
+> [My-Owner](https://darian1996.github.io/other_video/easy-study-for-love/My-Owner/)
 
 
 
