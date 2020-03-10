@@ -8,6 +8,8 @@
 
 ### 在Windows上安装Git
 
+- 淘宝镜像下载地址：https://npm.taobao.org/mirrors/git-for-windows/
+
 在Windows上使用Git，可以从Git官网直接[下载安装程序](https://git-scm.com/downloads)，（网速慢的同学请移步[国内镜像](https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit)），然后按默认选项安装即可。
 
 安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
