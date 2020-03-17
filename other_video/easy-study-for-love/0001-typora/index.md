@@ -129,4 +129,8 @@
 
   保存，运行，确定，看是否可以。
 
+## Typora Emoji
 
+Typora Emoji
+
+- [https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/Typora Emoji/](https://darian1996.github.io/other_video/easy-study-for-love/0001-typora/Typora Emoji/)
