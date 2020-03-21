@@ -1,4 +1,4 @@
-# 常用软件安装
+# <font color="red">常用软件安装</font>
 
 - MobaXterm
   - [链接](https://darian1996.github.io/other_video/easy-study-for-love/MobaXterm) 
