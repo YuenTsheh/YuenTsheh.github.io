@@ -8,7 +8,8 @@
 
 
     <script>
-        var searchUrl = "http://localhost:8080";
+        var searchUrl = "http://localhost:8080/search";
+        var refreshUrl = "http://localhost:8080/refresh";
 
         // 监听 enter 事件, return false 禁止页面刷新
         $(function () {
@@ -46,6 +47,39 @@
             return str.trim();
         };
 
+        function refresh_button_onclick() {
+            var token_value = getCookie("token-key");
+
+            if (!token_value) {
+                $('#notifyMsg_id').html("用户没有登录 ... ... ");
+                $('#table_tbody_id').html("");
+                return false;
+            }
+
+            $.ajax({
+                url: refreshUrl,
+                type: 'get',
+                dataType: 'json',
+                changeOrigin: true, // 是否跨域
+                data: "parm=" + encodeURIComponent(parm_value),
+                beforeSend: function (XMLHttpRequest) {
+                    $('#notifyMsg_id').html("Please waiting, Loading data ....");
+                    // alert(token_value);
+                    XMLHttpRequest.setRequestHeader("token-key", token_value);
+                },
+                success: function (datas, state) {
+                    // alert(state);
+                    $('#notifyMsg_id').html(datas.notifyMsg);
+                }
+                ,
+                error: function (xhr, state, errorThrown) {
+                    $('#notifyMsg_id').html("查询出错，请联系管理员！！！");
+                }
+
+            })
+        };
+        
+        
         function submit_button_onclick() {
             var token_value = getCookie("token-key");
             var parm_value_old = $('#parm_id').val();
@@ -85,11 +119,11 @@
                     $('#parm_id').html(datas.parm);
                     var table_tbody_id_html = "";
 
-                    for (var i = 0; i < datas.customerFileList.length; i++) {
-                        var name = datas.customerFileList[i].name;
-                        var content = datas.customerFileList[i].content;
-                        var gitHubUrl = datas.customerFileList[i].gitHubUrl;
-                        var giteeUrl = datas.customerFileList[i].giteeUrl;
+                    for (var i = 0; i < datas.dataBody.length; i++) {
+                        var name = datas.dataBody[i].name;
+                        var content = datas.dataBody[i].content;
+                        var gitHubUrl = datas.dataBody[i].gitHubUrl;
+                        var giteeUrl = datas.dataBody[i].giteeUrl;
                         // alert(name + "-" + content + "-" + giteeUrl + "-" + giteeUrl);
                         $('#customerFile_name_id').html()
 
@@ -141,11 +175,14 @@
             // 当前网页的地址
             // alert(location.href);
             if (new RegExp("^http://localhost").test(location.href)) {
-                searchUrl = "http://localhost:8080/";
+                searchUrl = "http://localhost:8080/search";
+                refreshUrl = "http://localhost:8080/refresh";
             } else if (new RegExp("^https://darian1996.github.io/").test(location.href)) {
-                searchUrl = "http://39.105.143.0/";
+                searchUrl = "https://39.105.143.0/search";
+                refreshUrl = "https://39.105.143.0/refresh";
             } else if (new RegExp("^http://39.105.143.0/").test(location.href)) {
-                searchUrl = "http://39.105.143.0/";
+                searchUrl = "https://39.105.143.0/search";
+                refreshUrl = "https://39.105.143.0/refresh";
             }
 
             consoleCookieValue();
@@ -153,7 +190,7 @@
             // var notifyMsg = [[${notifyMsg}]];
 
             // if (!notifyMsg) {
-            $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+                $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
             // } else {
             //     $('#notifyMsg_id').html(notifyMsg);
             // }
@@ -207,6 +244,10 @@
             <input type="button" id="submit_button_id" value="Search" class="bg s_btn"
                    style="background-color: #2d78f4; color: white ;
            width:10%; height:42px; font-size:25px;" onclick="submit_button_onclick()"/>
+
+            <input type="button" id="refresh_button_id" value="OnRefresh" class="bg s_btn"
+                   style="background-color: #2d78f4; color: white ;
+           width:10%; height:42px; font-size:25px;" onclick="refresh_button_onclick()"/>
 
         </form>
     </div>
