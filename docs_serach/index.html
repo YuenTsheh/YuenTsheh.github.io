@@ -48,7 +48,7 @@
         };
 
         function refresh_button_onclick() {
-            var token_value = getCookie("token-key");
+            var token_value = getCookie("token");
 
             if (!token_value) {
                 $('#notifyMsg_id').html("用户没有登录 ... ... ");
@@ -65,7 +65,7 @@
                 beforeSend: function (XMLHttpRequest) {
                     $('#notifyMsg_id').html("Please waiting, Loading data ....");
                     // alert(token_value);
-                    XMLHttpRequest.setRequestHeader("token-key", token_value);
+                    XMLHttpRequest.setRequestHeader("token", token_value);
                 },
                 success: function (datas, state) {
                     // alert(state);
@@ -78,10 +78,10 @@
 
             })
         };
-        
-        
+
+
         function submit_button_onclick() {
-            var token_value = getCookie("token-key");
+            var token_value = getCookie("token");
             var parm_value_old = $('#parm_id').val();
 
             if (!token_value) {
@@ -111,13 +111,17 @@
                 beforeSend: function (XMLHttpRequest) {
                     $('#notifyMsg_id').html("Please waiting, Loading data ....");
                     // alert(token_value);
-                    XMLHttpRequest.setRequestHeader("token-key", token_value);
+                    XMLHttpRequest.setRequestHeader("token", token_value);
                 },
                 success: function (datas, state) {
                     // alert(state);
                     $('#notifyMsg_id').html(datas.notifyMsg);
                     $('#parm_id').html(datas.parm);
                     var table_tbody_id_html = "";
+
+                    if (datas.dataBody == null) {
+                        return;
+                    }
 
                     for (var i = 0; i < datas.dataBody.length; i++) {
                         var name = datas.dataBody[i].name;
@@ -161,9 +165,9 @@
 
         // 打印出来 cookie
         function consoleCookieValue() {
-            console.log("document.cookie=\"token-key=token_value\"");
+            console.log("document.cookie=\"token=tokenValue\"");
             console.log("-");
-            console.log("document.cookie=\"token-key=\"");
+            console.log("document.cookie=\"token=\"");
             console.log("-");
             console.log("document.cookie");
             console.log("-");
@@ -180,7 +184,7 @@
             } else if (new RegExp("^https://darian1996.github.io/").test(location.href)) {
                 searchUrl = "https://39.105.143.0/search";
                 refreshUrl = "https://39.105.143.0/refresh";
-            } else if (new RegExp("^http://39.105.143.0/").test(location.href)) {
+            } else if (new RegExp("^https://39.105.143.0/").test(location.href)) {
                 searchUrl = "https://39.105.143.0/search";
                 refreshUrl = "https://39.105.143.0/refresh";
             }
@@ -190,7 +194,7 @@
             // var notifyMsg = [[${notifyMsg}]];
 
             // if (!notifyMsg) {
-                $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
+            $('#notifyMsg_id').html("欢迎，你来 搜索 ... ... ");
             // } else {
             //     $('#notifyMsg_id').html(notifyMsg);
             // }
