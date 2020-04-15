@@ -12,6 +12,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <!-- Page Header -->
 {% include intro-header.html type='page' short=true %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,6 +93,17 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
             })
         };
+
+
+        function login_button_onclick() {
+            var token_value = $('#token_id').val();
+            var name = 'token';
+            var exp = new Date();
+            exp.setTime(exp.getTime() + 1000 * 60 * 60 * 24 * 7);// 过期时间 7 天
+            document.cookie = name + "=" + escape(token_value) + ";expires=" + exp.toGMTString();
+            // console.log(name + "=" + escape(token_value) + ";expires=" + exp.toGMTString());
+            $('#token_id').val("");
+        }
 
 
         function submit_button_onclick() {
@@ -179,13 +191,10 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
         // 打印出来 cookie
         function consoleCookieValue() {
-            console.log("document.cookie=\"token=tokenValue\"");
-            console.log("-");
-            console.log("document.cookie=\"token=\"");
-            console.log("-");
-            console.log("document.cookie");
-            console.log("-");
-            console.log(document.cookie);
+            // console.log("document.cookie=\"token=tokenValue\"");
+            // console.log("document.cookie=\"token=\"");
+            // console.log("document.cookie");
+            // console.log(document.cookie);
         }
 
         // 用户关闭页面或刷新浏览器时会触发onunload事件
@@ -246,7 +255,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
     </script>
 </head>
 
-<div>
+<div style="width:90%; margin: 5% auto">
     <div align="center">
         <h2 id="notifyMsg_id" bgcolor="white"
             style="color: crimson;align-content: center;  width: 70%"
@@ -261,21 +270,28 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
             <input type="button" id="submit_button_id" value="Search" class="bg s_btn"
                    style="background-color: #2d78f4; color: white ;
-           width:10%; height:42px; font-size:25px;" onclick="submit_button_onclick()"/>
+           width:8%; height:42px; font-size:25px;" onclick="submit_button_onclick()"/>
 
             <input type="button" id="refresh_button_id" value="OnRefresh" class="bg s_btn"
                    style="background-color: #2d78f4; color: white ;
-           width:10%; height:42px; font-size:25px;" onclick="refresh_button_onclick()"/>
+           width:8%; height:42px; font-size:25px;" onclick="refresh_button_onclick()"/>
+
+            <input id="token_id" type="password" maxlength="255" autocomplete="off"
+                   style="background-color: lavender; color: black;
+               width:10%; height:42px; font-size:25px;"/>
+            <input type="button" id="login_button_id" value="login" class="bg s_btn"
+                   style="background-color: #2d78f4; color: white ;
+           width:5%; height:42px; font-size:25px;" onclick="login_button_onclick()"/>
 
         </form>
     </div>
 
-
     <br/>
+
     <!-- border 外边框-->
     <!-- cellpadding 内边距-->
-    <table cellpadding="10" cellspacing="0" width="90%" align="center"
-           style="border-color: #7b7b7b " border="5px" bordercolor="#777272" bgcolor="#e6e5e5">
+    <table cellpadding="10" cellspacing="0" style="border-color: #7b7b7b ;"
+           border="5px" bordercolor="#777272" bgcolor="#e6e5e5">
         <thead>
         <th width="150px">标题</th>
         <th>文章内容</th>
