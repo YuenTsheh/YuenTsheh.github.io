@@ -12,160 +12,160 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <!-- Page Header -->
 {% include intro-header.html type='page' short=true %}
 
-<head>
-    <link rel="shortcut icon" href="https://darian1996.gitee.io/favicon.ico" type="image/x-icon"/>
-    <!-- 开源的 github-markdown 的地址 -->
-    <!-- https://github.com/sindresorhus/github-markdown-css -->
-    <link rel="stylesheet" href="https://darian1996.gitee.io/css/github-markdown.css">
-    <!--    <link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">-->
-    <!-- toc 边框 -->
-    <link rel="stylesheet" href="https://darian1996.gitee.io/css/zTreeStyle.css">
-    <!--    <link rel="stylesheet" href="https://i5ting.github.io/i5ting_ztree_toc/build/style/zTreeStyle/zTreeStyle.css">-->
-    <!---->
-    <script src="https://darian1996.gitee.io/js/jquery-3.3.1.min.js"></script>
-    <!--    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
 
-    <script src="https://darian1996.gitee.io/js/marked.min.js"></script>
-    <!--    <script src="https://cdn.bootcss.com/marked/0.3.4/marked.min.js"></script>-->
+<link rel="shortcut icon" href="https://darian1996.gitee.io/favicon.ico" type="image/x-icon"/>
+<!-- 开源的 github-markdown 的地址 -->
+<!-- https://github.com/sindresorhus/github-markdown-css -->
+<link rel="stylesheet" href="https://darian1996.gitee.io/css/github-markdown.css">
+<!--    <link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">-->
+<!-- toc 边框 -->
+<link rel="stylesheet" href="https://darian1996.gitee.io/css/zTreeStyle.css">
+<!--    <link rel="stylesheet" href="https://i5ting.github.io/i5ting_ztree_toc/build/style/zTreeStyle/zTreeStyle.css">-->
+<!---->
+<script src="https://darian1996.gitee.io/js/jquery-3.3.1.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
 
-    <script src="https://darian1996.gitee.io/js/highlight.min.js"></script>
-    <!--    <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>-->
-    <!-- toc 边框 -->
-    <script src="https://darian1996.gitee.io/js/jquery.ztree_toc.min.js"></script>
-    <!--    <script src="https://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree_toc.min.js"></script>-->
-    <script src="https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js"></script>
-    <!--    <script src="https://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree.all-3.5.min.js"></script>-->
-    <script src="https://darian1996.gitee.io/js/darian.own.js"></script>
+<script src="https://darian1996.gitee.io/js/marked.min.js"></script>
+<!--    <script src="https://cdn.bootcss.com/marked/0.3.4/marked.min.js"></script>-->
+
+<script src="https://darian1996.gitee.io/js/highlight.min.js"></script>
+<!--    <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>-->
+<!-- toc 边框 -->
+<script src="https://darian1996.gitee.io/js/jquery.ztree_toc.min.js"></script>
+<!--    <script src="https://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree_toc.min.js"></script>-->
+<script src="https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js"></script>
+<!--    <script src="https://i5ting.github.io/i5ting_ztree_toc/build/js/jquery.ztree.all-3.5.min.js"></script>-->
+<script src="https://darian1996.gitee.io/js/darian.own.js"></script>
 
 
-    <script>
-        var contentDetailUrl = "https://www.darian.top/getCustomerFile";
-        var contentImgUrl = "https://www.darian.top/getImgContent";
-        var locationData;
+<script>
+    var contentDetailUrl = "https://www.darian.top/getCustomerFile";
+    var contentImgUrl = "https://www.darian.top/getImgContent";
+    var locationData;
 
-        /* 初始化连接常量 */
-        function initContantsUrl() {
-            console.log("function{initContantsUrl}.start")
-            // 当前网页的地址
-            if (new RegExp("^http://localhost").test(location.href)) {
-                contentDetailUrl = "http://localhost:8080/getCustomerFile";
-                contentImgUrl = "http://localhost:8080/getImgContent";
-            }
-            console.log('\t[location.href]:' + location.href);
-            console.log('\t[contentDetailUrl]:' + contentDetailUrl);
-            console.log('\t[contentImgUrl]:' + contentImgUrl);
+    /* 初始化连接常量 */
+    function initContantsUrl() {
+        console.log("function{initContantsUrl}.start")
+        // 当前网页的地址
+        if (new RegExp("^http://localhost").test(location.href)) {
+            contentDetailUrl = "http://localhost:8080/getCustomerFile";
+            contentImgUrl = "http://localhost:8080/getImgContent";
+        }
+        console.log('\t[location.href]:' + location.href);
+        console.log('\t[contentDetailUrl]:' + contentDetailUrl);
+        console.log('\t[contentImgUrl]:' + contentImgUrl);
+    }
+
+    marked.setOptions({
+        renderer: new marked.Renderer(),
+        gfm: true,
+        tables: true,
+        escaped: true,
+        breaks: false,
+        pedantic: false,
+        sanitize: false,
+        smartLists: true,
+        smartypants: false,
+        highlight: function (code, lang) {
+            return hljs.highlightAuto(code).value;
+        }
+    });
+
+
+    var text = '';
+
+    window.onload = function () {
+        initContantsUrl();
+
+        var file_path_sub_docs_file_path = getQueryVariable("filePathSubDocsFilePath");
+        var cache_value = getQueryVariable("cache");
+        if (!cache_value) {
+            $('#notifyMsg_id').html("无缓存");
+            cache_value = false;
         }
 
-        marked.setOptions({
-            renderer: new marked.Renderer(),
-            gfm: true,
-            tables: true,
-            escaped: true,
-            breaks: false,
-            pedantic: false,
-            sanitize: false,
-            smartLists: true,
-            smartypants: false,
-            highlight: function (code, lang) {
-                return hljs.highlightAuto(code).value;
-            }
-        });
+        var token_value = getCookie('token');
 
+        if (!check_file_path_sub_docs_file_path(file_path_sub_docs_file_path) || !check_token_value(token_value)) {
+            return false;
+        }
 
-        var text = '';
+        $.ajax({
+            url: contentDetailUrl,
+            type: 'get',
+            dataType: 'json',
+            changeOrigin: true, // 是否跨域
+            data: "cache=" + cache_value + "&filePathSubDocsFilePath=" + encodeURIComponent(file_path_sub_docs_file_path),
+            beforeSend: function (XMLHttpRequest) {
+                $('#notifyMsg_id').html("Please waiting, Loading data ....");
+                XMLHttpRequest.setRequestHeader("token", token_value);
+            },
+            success: function (datas, state) {
+                locationData = datas;
+                // alert(state);
+                $('#notifyMsg_id').html(datas.notifyMsg);
+                console.log(datas.dataBody);
+                // 填充 md 的文档，渲染 html 文件
+                $("#content_html_id").html(marked(datas.dataBody.contentDetail)); //这个是jquery代码
 
-        window.onload = function () {
-            initContantsUrl();
+                var fileSimpleName = datas.dataBody.fileSimpleName;
+                $("#content_title_id").html(fileSimpleName);
+                $("title").html(fileSimpleName);
 
-            var file_path_sub_docs_file_path = getQueryVariable("filePathSubDocsFilePath");
-            var cache_value = getQueryVariable("cache");
-            if (!cache_value) {
-                $('#notifyMsg_id').html("无缓存");
-                cache_value = false;
-            }
+                $('#tree').ztree_toc({
+                    // 是否开启，标题自动添加序号, false 去掉。
+                    is_auto_number: false,
+                    documment_selector: '.markdown-body'
+                });
+                $('#tree').css('width', '23%').css('margin-top', '2px');
 
-            var token_value = getCookie('token');
+                console.log("======================================")
+                console.log(" user gitee.io img...........")
+                return;
 
-            if (!check_file_path_sub_docs_file_path(file_path_sub_docs_file_path) || !check_token_value(token_value)) {
-                return false;
-            }
-
-            $.ajax({
-                url: contentDetailUrl,
-                type: 'get',
-                dataType: 'json',
-                changeOrigin: true, // 是否跨域
-                data: "cache=" + cache_value + "&filePathSubDocsFilePath=" + encodeURIComponent(file_path_sub_docs_file_path),
-                beforeSend: function (XMLHttpRequest) {
-                    $('#notifyMsg_id').html("Please waiting, Loading data ....");
-                    XMLHttpRequest.setRequestHeader("token", token_value);
-                },
-                success: function (datas, state) {
-                    locationData = datas;
-                    // alert(state);
-                    $('#notifyMsg_id').html(datas.notifyMsg);
-                    console.log(datas.dataBody);
-                    // 填充 md 的文档，渲染 html 文件
-                    $("#content_html_id").html(marked(datas.dataBody.contentDetail)); //这个是jquery代码
-
-                    var fileSimpleName = datas.dataBody.fileSimpleName;
-                    $("#content_title_id").html(fileSimpleName);
-                    $("title").html(fileSimpleName);
-
-                    $('#tree').ztree_toc({
-                        // 是否开启，标题自动添加序号, false 去掉。
-                        is_auto_number: false,
-                        documment_selector: '.markdown-body'
-                    });
-                    $('#tree').css('width', '23%').css('margin-top', '2px');
-
-                    console.log("======================================")
-                    console.log(" user gitee.io img...........")
+                if (fileSimpleName.endsWith(".png")
+                    || fileSimpleName.endsWith(".jpg")
+                    || fileSimpleName.endsWith("JPEG")
+                    || fileSimpleName.endsWith("svg")
+                    || fileSimpleName.endsWith(".gif")
+                ) {
+                    console.log("this file is img .... not need to getImage Url ")
                     return;
-
-                    if (fileSimpleName.endsWith(".png")
-                        || fileSimpleName.endsWith(".jpg")
-                        || fileSimpleName.endsWith("JPEG")
-                        || fileSimpleName.endsWith("svg")
-                        || fileSimpleName.endsWith(".gif")
-                    ) {
-                        console.log("this file is img .... not need to getImage Url ")
-                        return;
-                    }
-
-
-                    var fullName = locationData.dataBody.fileFullName;
-                    get_img_base64_data_url_function(fullName);
-
-
-                }
-                ,
-                error: function (xhr, state, errorThrown) {
-                    $('#notifyMsg_id').html("查询出错，请联系管理员！！！");
                 }
 
-            })
+
+                var fullName = locationData.dataBody.fileFullName;
+                get_img_base64_data_url_function(fullName);
 
 
+            }
+            ,
+            error: function (xhr, state, errorThrown) {
+                $('#notifyMsg_id').html("查询出错，请联系管理员！！！");
+            }
+
+        })
+
+
+    };
+
+
+    if (typeof String.prototype.endsWith != 'function') {
+        String.prototype.endsWith = function (suffix) {
+            return this.indexOf(suffix, this.length - suffix.length) !== -1;
         };
+    }
+
+    if (typeof String.prototype.startsWith != 'function') {
+        String.prototype.startsWith = function (prefix) {
+            return this.slice(0, prefix.length) === prefix;
+        };
+    }
 
 
-        if (typeof String.prototype.endsWith != 'function') {
-            String.prototype.endsWith = function (suffix) {
-                return this.indexOf(suffix, this.length - suffix.length) !== -1;
-            };
-        }
-
-        if (typeof String.prototype.startsWith != 'function') {
-            String.prototype.startsWith = function (prefix) {
-                return this.slice(0, prefix.length) === prefix;
-            };
-        }
+</script>
 
 
-    </script>
-
-</head>
 <body>
 
 
