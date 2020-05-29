@@ -229,7 +229,7 @@ var loadHead = {
         this.js.forEach((js,index)=>{
             let importJsCopy = $(importJs).clone();
             // 给script标签增加src属性
-            importJsCopy.setAttribute("src",'https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js')
+            importJsCopy.attr("src",'https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js')
             // 把importJs标签添加在页面
             document.getElementsByTagName("head")[0].appendChild(importJs)
         })
