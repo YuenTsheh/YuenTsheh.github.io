@@ -17,10 +17,8 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <link rel="shortcut icon" href="https://darian1996.gitee.io/favicon.ico" type="image/x-icon"/>
 <!-- 开源的 github-markdown 的地址 -->
 <!-- https://github.com/sindresorhus/github-markdown-css -->
-<link rel="stylesheet" href="https://darian1996.gitee.io/css/github-markdown.css">
 <!--    <link rel="stylesheet" href="https://sindresorhus.com/github-markdown-css/github-markdown.css">-->
 <!-- toc 边框 -->
-<link rel="stylesheet" href="https://darian1996.gitee.io/css/zTreeStyle.css">
 <!--    <link rel="stylesheet" href="https://i5ting.github.io/i5ting_ztree_toc/build/style/zTreeStyle/zTreeStyle.css">-->
 <!---->
 <script src="https://darian1996.gitee.io/js/jquery-3.3.1.min.js"></script>
@@ -220,21 +218,32 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <script>
 var loadHead = {
     js:[],
+    css:[],
+    jsTemp: document.createElement('script'),
+    cssTemp: document.createElement('link'),
     load(){
-        var importJs=document.createElement('script')
-        // 给script标签增加type属性
-        importJs.setAttribute("type","text/JavaScript")
         this.js.forEach((js,index)=>{
-            let importJsCopy = $(importJs).clone();
+            let jsCopy = $(this.jsTemp).clone();
             // 给script标签增加src属性
-            importJsCopy.attr("src",js)
+            jsCopy.attr("src",js)
+            jsCopy.attr("type","text/JavaScript")
             // 把importJs标签添加在页面
-            $("head:eq(0)").append(importJsCopy)
+            $("body:eq(0)").append(jsCopy)
+        })
+        this.css.forEach((css,index)=>{
+            let cssCopy = $(this.cssTemp).clone();
+            // 给script标签增加src属性
+            cssCopy.attr("href",css)
+            cssCopy.attr("rel","stylesheet")
+            // 把importJs标签添加在页面
+            $("head:eq(0)").append(cssCopy)
         })
     }
 }
 loadHead.js.push("https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js");
 loadHead.js.push("https://darian1996.gitee.io/js/jquery.ztree_toc.min.js");
+loadHead.css.push("https://darian1996.gitee.io/css/github-markdown.css");
+loadHead.css.push("https://darian1996.gitee.io/css/zTreeStyle.css");
 loadHead.load();
     /* 这个是替换 base64 位的 图片链接，淘汰 */
     function get_img_base64_data_url_function(fullName) {
