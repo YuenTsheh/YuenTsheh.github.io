@@ -118,5 +118,13 @@ friends: [
     {
         title: "本人博客首页",
         href: "https://darian1996.github.io/"
+    },
+    {
+        title: "My-Own-Private-Search-Everything",
+        href: "https://www.darian.top/docsSearch.html"
+    },
+    {
+        title: "一些-工具-doc",
+        href: "https://darian1996.github.io/other_video/easy-study-for-love/"
     }
 ]
