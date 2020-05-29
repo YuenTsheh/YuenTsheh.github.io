@@ -220,8 +220,24 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 
 <script>
-
-
+var loadHead = {
+    js:[],
+    load(){
+        var importJs=document.createElement('script')
+        // 给script标签增加type属性
+        importJs.setAttribute("type","text/JavaScript")
+        this.js.forEach((js,index)=>{
+            let importJsCopy = $(importJs).clone();
+            // 给script标签增加src属性
+            importJsCopy.setAttribute("src",'https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js')
+            // 把importJs标签添加在页面
+            document.getElementsByTagName("head")[0].appendChild(importJs)
+        })
+    }
+}
+loadHead.js.push("https://darian1996.gitee.io/js/jquery.ztree.all-3.5.min.js");
+loadHead.js.push("https://darian1996.gitee.io/js/jquery.ztree_toc.min.js");
+loadHead.load();
     /* 这个是替换 base64 位的 图片链接，淘汰 */
     function get_img_base64_data_url_function(fullName) {
         console.log("get img........start");
