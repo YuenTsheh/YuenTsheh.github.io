@@ -33,7 +33,7 @@ paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md","customer_modify"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
-timezone: CN  
+timezone: CN
 
 
 
@@ -126,5 +126,13 @@ friends: [
     {
         title: "一些-工具-doc",
         href: "https://darian1996.github.io/other_video/easy-study-for-love/"
-    }
+    },
+    {
+       title: "https://www.darian.top/",
+       href: "https://www.darian.top/docsSearch.html"
+    },
+     {
+       title: "https://darian1996.gitee.io/",
+       href: "https://darian1996.gitee.io/"
+     }
 ]
