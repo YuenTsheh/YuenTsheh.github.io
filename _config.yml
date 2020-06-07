@@ -1,25 +1,25 @@
 # Site settings
-title: Darian Blog
-SEOTitle: 无剑的博客 | Darian Blog
+title: YuenTsheh's Blog
+SEOTitle: YTsh的博客 | YTsh's Blog
 header-img: img/home-bg.jpg
-email: darian1934849492@gmail.com
-description: "关于程序与设计 Web & Software Engineer & Java | 这里是 @Darian 的个人博客，与你一起发现更大的世界。"
-keyword: "Darian, Darian无剑, 无剑的博客, Darian Blog, 博客, 个人网站, 互联网, Web, Java, 后端, 架构, 设计"
+email: yunzaklau@gmail.com
+description: "记录终身学习的所思所得 | 这里是 @YuenTsheh 的个人博客，分享生活的美丽和忧伤。"
+keyword: "YuenTsheh, Blog, 博客, 个人网站, 心理学，语言，社会，文化"
 url: ""              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 post:
-  author: darian
+  author: YuenTsheh
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
 RSS: true
-#weibo_username:     
-github_username:    Darian1996
-wechat_username:    无剑
-#twitter_username:   
+#weibo_username:
+github_username:    YuenTsheh
+wechat_username:    Yoooooookit
+#twitter_username:
 #facebook_username:  darian
 #linkedin_username:  darian
 
@@ -70,7 +70,7 @@ netease_comment: false
 
 
 # Analytics settings
-# Baidu Analytics 
+# Baidu Analytics
 # ba_track_id: [your track id]
 
 # Google Analytics
@@ -82,8 +82,8 @@ netease_comment: false
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "
-我想做一个浪漫的极客<br/>
-I want to be a romantic geek"
+语言，文化，社会<br/>
+Language, Culrute, Society"
 sidebar-avatar: /img/darian.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -105,34 +105,34 @@ page-mathjax: false
 
 
 
-# Friends
+Friends
 friends: [
+    #  {
+    #     title: "强烈推荐：mercyblitz Blog",
+    #     href: "https://mercyblitz.github.io/"
+    # },
+    # {
+    #     title: "yuequan Blog",
+    #     href: "http://yuequan.org/"
+    # },
+    # {
+    #     title: "本人博客首页",
+    #     href: "https://darian1996.github.io/"
+    # },
+    # {
+    #     title: "私人网站-全文检索",
+    #     href: "https://www.darian.top/"
+    # },
+    # {
+    #     title: "一些-工具-doc",
+    #     href: "https://darian1996.github.io/other_video/easy-study-for-love/"
+    # },
+    # {
+    #    title: "https://www.darian.top/",
+    #    href: "https://www.darian.top/"
+    # },
      {
-        title: "强烈推荐：mercyblitz Blog",
-        href: "https://mercyblitz.github.io/"
-    },
-    {
-        title: "yuequan Blog",
-        href: "http://yuequan.org/"
-    },
-    {
-        title: "本人博客首页",
-        href: "https://darian1996.github.io/"
-    },
-    {
-        title: "私人网站-全文检索",
-        href: "https://www.darian.top/"
-    },
-    {
-        title: "一些-工具-doc",
-        href: "https://darian1996.github.io/other_video/easy-study-for-love/"
-    },
-    {
-       title: "https://www.darian.top/",
-       href: "https://www.darian.top/"
-    },
-     {
-       title: "https://darian1996.gitee.io/",
-       href: "https://darian1996.gitee.io/"
+       title: "个人知乎首页",
+       href: "https://www.zhihu.com/people/Alexeyliu"
      }
 ]
