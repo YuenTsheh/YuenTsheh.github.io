@@ -2,8 +2,6 @@
 
 ​使用这个博客来记录终身学习过程中的所思所得
 
-感谢模板的改进者[darian](https://darian1996.github.io/)
-和原作者[Xuan Huang](https://huangxuan.me/)
+感谢这个模板的原作者[Xuan Huang](https://huangxuan.me/)和改进者[darian](https://darian1996.github.io/)
 
-
-## 感谢观看
+## 也感谢您的感谢观看
