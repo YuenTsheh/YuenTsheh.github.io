@@ -105,34 +105,34 @@ page-mathjax: false
 
 
 
-Friends
-friends: [
-     {
-        title: "强烈推荐：mercyblitz Blog",
-        href: "https://mercyblitz.github.io/"
-    },
-    {
-        title: "yuequan Blog",
-        href: "http://yuequan.org/"
-    },
-    {
-        title: "本人博客首页",
-        href: "https://darian1996.github.io/"
-    },
-    {
-        title: "私人网站-全文检索",
-        href: "https://www.darian.top/"
-    },
-    {
-        title: "一些-工具-doc",
-        href: "https://darian1996.github.io/other_video/easy-study-for-love/"
-    },
-    {
-       title: "https://www.darian.top/",
-       href: "https://www.darian.top/"
-    },
-     {
-       title: "个人知乎首页",
-       href: "https://www.zhihu.com/people/Alexeyliu"
-     }
-]
+# Friends
+# friends: [
+#      {
+#         title: "强烈推荐：mercyblitz Blog",
+#         href: "https://mercyblitz.github.io/"
+#     },
+#     {
+#         title: "yuequan Blog",
+#         href: "http://yuequan.org/"
+#     },
+#     {
+#         title: "本人博客首页",
+#         href: "https://darian1996.github.io/"
+#     },
+#     {
+#         title: "私人网站-全文检索",
+#         href: "https://www.darian.top/"
+#     },
+#     {
+#         title: "一些-工具-doc",
+#         href: "https://darian1996.github.io/other_video/easy-study-for-love/"
+#     },
+#     {
+#        title: "https://www.darian.top/",
+#        href: "https://www.darian.top/"
+#     },
+#      {
+#        title: "个人知乎首页",
+#        href: "https://www.zhihu.com/people/Alexeyliu"
+#      }
+# ]
