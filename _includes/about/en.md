@@ -2,8 +2,9 @@
 
 - Social & Cultural Psychology
 - 1998
-- Postgraduate
-- School of Psychological & Cognitive Sciences, Peking University
+- Education
+  - M.A.: School of Psychological & Cognitive Sciences, Peking University(2020.09-)
+  - B.S.: Faculty of Psychology, Beijing Normal University(2016.09-2020.06)
 - Email：yunzaklau@gmail.com
 - GitHub：[https://github.com/YuenTsheh](https://github.com/YuenTsheh)
 - Personal Blog：[https://yuentsheh.github.io/](https://yuentsheh.github.io/)
