@@ -21,14 +21,13 @@
 - Quantitative Research：SPSS、R
 - Qualitative Research：NVivo11
 - Tools：Qualtrics、Matlab Psychtoolbox
-- Office：Word、Excel、PowerPoint
 - Language：Mandarin、English、Hu-Guang Mandarin、Chang-Yi Hunanese、Guang-Fu Cantonese
 
 
 
 
 
-> Click my Avatar in the bottom to get my Wechat
+<!-- > Click my Avatar in the bottom to get my Wechat -->
 
 
 

@@ -22,11 +22,10 @@
 - 量化研究：SPSS、R
 - 质性研究：NVivo11
 - 工具：Qualtrics、Matlab Psychtoolbox
-- 办公：Word、Excel、PowerPoint
 - 语言：普通话、英语、官话湖广片、湘语长益片、粤语广府片
 
 
 
 
 
-> 微信请点击页尾或者右侧个人小卡片
+<!-- > 微信请点击页尾或者右侧个人小卡片 -->
