@@ -2,12 +2,11 @@
 
 - Social & Cultural Psychology
 - 1998
-- Education
-  * **Graduate**-School of Psychological & Cognitive Sciences, Peking University_(2020.09-)_
-  * **Undergraduate**-Faculty of Psychology, Beijing Normal University_(2016.09-2020.06)_
-- Email：yunzaklau@gmail.com
-- GitHub：[https://github.com/YuenTsheh](https://github.com/YuenTsheh)
+- **Graduate**-School of Psychological & Cognitive Sciences, Peking University(2020.09-)
+- **Undergraduate**-Faculty of Psychology, Beijing Normal University(2016.09-2020.06)
+- Email：yuentsheh@foxmail.com
 - Personal Blog：[https://yuentsheh.github.io/](https://yuentsheh.github.io/)
+<!-- - GitHub：[https://github.com/YuenTsheh](https://github.com/YuenTsheh) -->
 
 
 
@@ -19,9 +18,9 @@
 
 ## Skills：
 
-- Quantitative Research：SPSS、R
+- Quantitative Research：SPSS、PROCESS、R
 - Qualitative Research：NVivo11
-- Tools：Qualtrics、Matlab Psychtoolbox
+- Experiment Tools：Qualtrics、Matlab Psychtoolbox
 - Language：Mandarin、English、Hu-Guang Mandarin、Chang-Yi Hunanese、Guang-Fu Cantonese
 
 
