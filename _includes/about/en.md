@@ -10,9 +10,11 @@
 
 
 
-## Self Intro：
+## Personal Interest：
 
-- to fill in
+- language is the tool of people's thinking
+- culture is the air of social life
+- creation is the process of the world's development
 
 
 
