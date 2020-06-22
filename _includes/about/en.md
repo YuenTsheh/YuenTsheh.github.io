@@ -2,8 +2,10 @@
 
 - Social & Cultural Psychology
 - 1998
-- **Graduate**-School of Psychological & Cognitive Sciences, Peking University(2020.09-)
-- **Undergraduate**-Faculty of Psychology, Beijing Normal University(2016.09-2020.06)
+- **Graduate**
+  - Peking University(2020.09-)
+- **Undergraduate**
+  - Beijing Normal University(2016.09-2020.06)
 - Email：yuentsheh@foxmail.com
 - Personal Blog：[https://yuentsheh.github.io/](https://yuentsheh.github.io/)
 <!-- - GitHub：[https://github.com/YuenTsheh](https://github.com/YuenTsheh) -->

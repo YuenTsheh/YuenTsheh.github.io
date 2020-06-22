@@ -2,8 +2,10 @@
 
 - 社会&文化心理学
 - 1998年
-- **研究生**: 北京大学心理与认知科学学院(2020.09-)
-- **本科生**: 北京师范大学心理学部(2016.09-2020.06)
+- **研究生**
+  - 北京大学(2020.09-)
+- **本科生**: 
+  - 北京师范大学(2016.09-2020.06)
 - 个人邮箱：yuentsheh@foxmail.com
 - 个人博客：[https://yuentsheh.github.io/](https://yuentsheh.github.io/)
   <!-- - GitHub：[https://github.com/YuenTsheh](https://github.com/YuenTsheh) -->
