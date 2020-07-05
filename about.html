@@ -77,13 +77,14 @@ gitment.render('commentContainer')
 </script> -->
 
 <!-- Link Gitalk 的支持文件  -->
+<section id="comments">
+    <div id="gitalk-container"></div> 
+</section>  
 
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<section id="comments">
- <div id="gitalk-container"></div> 
-</section>   
-    <script type="text/javascript">
+ 
+<script type="text/javascript">
       var gitalk = new Gitalk({
         clientID:'0bedccef9464c4cf9f39',
         clientSecret: 'f35a576fb7124266d9277b396b58c72c4fcdf3a2',
@@ -94,6 +95,6 @@ gitment.render('commentContainer')
         id: md5(location.pathname),
         distractionFreeMode: false
       });
-      gitalk.render('gitalk-container');
+gitalk.render('gitalk-container');
 </script>
 <!-- Gitalk end -->  
