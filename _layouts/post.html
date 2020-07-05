@@ -105,7 +105,26 @@ layout: default
   {% include mathjax_support.html %}
 {% endif %}
 
-{% include gitalk.html %}  
+<!-- {% include gitalk.html %}   -->
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<div id="gitalk-container"></div>     
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        clientID:'0bedccef9464c4cf9f39',
+        clientSecret: 'f35a576fb7124266d9277b396b58c72c4fcdf3a2',
+        accessToken: 'f3a55e358be0e9bb5f290a384e42f59621f5a528',
+        repo: 'Blog-Comment',
+        owner:'YuenTsheh',
+        admin: ['YuenTsheh'],
+        id: md5(location.pathname),
+        distractionFreeMode: true
+      });
+      gitalk.render('gitalk-container');
+</script>
+<!-- Gitalk end -->
+
 
 {% if site.disqus_username %}
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
