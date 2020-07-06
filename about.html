@@ -61,7 +61,7 @@ multilingual: true
 </section>
 
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
 
 <script>
         var gitment = new Gitment({
@@ -74,6 +74,19 @@ multilingual: true
             },
         })
 gitment.render('commentContainer')
+// Auto Initialize Comments
+let cmtBtns = document.getElementsByClassName('gitment-comments-init-btn');
+  let isClicked = false;
+  let timer = setInterval(() => {
+    Array.prototype.forEach.call(cmtBtns, item => {
+      item.click();
+      isClicked = true;
+      if(isClicked) {
+        clearInterval(timer);
+        console.log('Clear timer.')
+      }        
+    })
+  }, 1000)
 </script>
 
 <!-- Link Gitalk 的支持文件  --> 
