@@ -56,7 +56,7 @@ multilingual: true
 
 
 <!-- 2019-07-16 添加 gitment 评论 -->
-<!-- <section id="comments">
+<section id="comments">
 	<div id="commentContainer"></div>
 </section>
 
@@ -67,18 +67,18 @@ multilingual: true
         var gitment = new Gitment({
             id: '<%= page.date %>',
             owner: 'YuenTsheh',
-            repo: 'issue-for-Darian1996-gitpage',
+            repo: 'Blog-Comment',
             oauth: {
                 client_id: '0bedccef9464c4cf9f39',
                 client_secret: 'f35a576fb7124266d9277b396b58c72c4fcdf3a2',
             },
         })
 gitment.render('commentContainer')
-</script> -->
+</script>
 
 <!-- Link Gitalk 的支持文件  --> 
 
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <div id="gitalk-container"></div> 
 <script type="text/javascript">
@@ -93,5 +93,5 @@ gitment.render('commentContainer')
         distractionFreeMode: false
       });
 gitalk.render('gitalk-container');
-</script>
+</script> -->
 <!-- Gitalk end -->  
