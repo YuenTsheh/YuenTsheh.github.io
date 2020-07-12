@@ -1,5 +1,5 @@
-::  这条命令使用当前时间来作为 commit 的信息
-set commit_msg= %date:~0,10%   %time% AutoCommit.bat by Darian
+::  锟斤拷锟斤拷锟斤拷锟斤拷使锟矫碉拷前时锟斤拷锟斤拷锟斤拷为 commit 锟斤拷锟斤拷息
+set commit_msg= %date:~0,10%   %time% AutoCommit.bat by YuenTsheh
 git status 
 git add * 
 git commit -m "%commit_msg%" 
@@ -7,7 +7,7 @@ git commit -m "%commit_msg%"
 git pull github master
 git push github master
 
-:: make a pause 这条命令用来等待
+:: make a pause 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟饺达拷
 :: pause
-:: Exit 用来推出当前命令
+:: Exit 锟斤拷锟斤拷锟狡筹拷锟斤拷前锟斤拷锟斤拷
 Exit
