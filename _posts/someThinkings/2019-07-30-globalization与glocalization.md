@@ -13,8 +13,10 @@ tags:
 
 防御过快的全球化有很强烈的现实动机（比如缓解死亡焦虑、获得意义感等等）。
 
-去年，著名物理学家高锟逝世，香港电台在纪念节目上用下面这首英国民谣《[the world is getting smaller](https://music.163.com/#/song?id=386958)》来怀念他，高先生是一个世界主义者，他曾说：“`我变成了这世界的一部分，不属于任何国家的一部分，我属于我所在的地方`”。
+去年，著名物理学家高锟逝世，香港电台在纪念节目上用下面这首英国民谣《the world is getting smaller》来怀念他，高先生是一个世界主义者，他曾说：“`我变成了这世界的一部分，不属于任何国家的一部分，我属于我所在的地方`”。
 
 高先生有着多文化背景和建构，但这样的人现在毕竟只是少数。
 
-<iframe src="//youtu.be/X3D_j6AyVaA" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<center>
+<iframe src="//player.bilibili.com/player.html?aid=25847778&bvid=BV1ps41157k6&cid=44176976&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</center>
