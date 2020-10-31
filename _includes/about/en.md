@@ -2,7 +2,7 @@
 
 - Social & Cultural Psychology
 - 1998
-- **Graduate**
+- **Master Student**
   - Peking University(2020.09-)
 - **Undergraduate**
   - Beijing Normal University(2016.09-2020.06)
@@ -22,10 +22,10 @@
 
 ## Skills：
 
-- Quantitative Research：SPSS、PROCESS、R
+- Quantitative Research：SPSS, PROCESS, Mplus, R
 - Qualitative Research：NVivo11
-- Experiment Tools：Qualtrics、Matlab Psychtoolbox
-- Language：Mandarin、English、Hu-Guang Mandarin、Chang-Yi Hunanese、Guang-Fu Cantonese
+- Experiment Tools：Qualtrics, Matlab Psychtoolbox
+- Language：Standard Mandarin, English, Hu-Guang Mandarin, Chang-Yi Hunanese, Guang-Fu Cantonese
 
 
 
