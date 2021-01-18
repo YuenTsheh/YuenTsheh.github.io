@@ -15,7 +15,7 @@ post:
 future: true
 
 # SNS settings
-RSS: false
+RSS: true
 #weibo_username:
 github_username:    YuenTsheh
 wechat_username:    Yoooooookit
